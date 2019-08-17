@@ -1,7 +1,6 @@
 # directdemocracy.world
 
-directdemocracy.world aims at establishing [direct democracy](https://en.wikipedia.org/wiki/Direct_democracy) everywhere.
-Such a direct democracy will bring peace, safety and prosperity to humananity, including saving the climate and the biodiversity.
+directdemocracy.world aims at establishing [direct democracy](https://en.wikipedia.org/wiki/Direct_democracy) everywhere in order to bring peace, safety and prosperity to humananity, including saving the climate and the biodiversity.
 The principle is that people will become citizens by organizing referundums and voting regardless of any official acknowledgement.
 Vote results from a limited number of citizens could be considered as survey results.
 Such results could feed debates, influence political decisions and incitate more people to become citizens.
