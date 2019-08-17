@@ -67,16 +67,26 @@ Such results can be checked by anyone.
 ## Anonymous voting
 
 This more complex system is similar to the public voting system.
-It guarantees the anonymity and verifiability of votes, but relies on a few extra trusted compoents:
-
-1. Anonynizers
-2. Ballot boxes
+It guarantees the anonymity and verifiability of votes, but relies on an extra trusted component: the anonymizers.
 
 ### Anonymizers
 
-When a citizen wants to vote, she securely sends her vote card and the referendum to the anonymizer with her signature.
-The anonymizer sign and publish the vote card and referendum.
+When a citizen wants to vote, she generate a new pair of private and public key specifically for this referendum.
+Then she securely sends two signed packets to the anonymizer.
+The first one contains her vote card and the referendum.
+The second one contains the public key.
+The anonymizer checks that both packets are received and that the citizen is entitled to vote (area, necessary trust level).
+If not, it declines the request of the citizen.
+Otherwise, the anonymizer signs the first packet and will publishes it when the vote period is over.
 That means the anonymizer handles the anonymous vote of this citizen on that referendum.
-If not already done, the anonymizer generate a private key specific to that referendum.
-The anonymizer securely sends back to the citizen a vote token which it signs.
-The vote token is actually a private key
+The anonymizer then removes the signature from the second packet and save the public key in its database without any reference to the citizen.
+The citizen selects an answer in the referendum, add the public key, sign it with the private key and publish it.
+Once the vote period is over, the anonymizer publish all the public key it stored in a random order, signed with its signature.
+Anyone can then verify that the number of published public keys matches the number of published vote cards/referendum packets.
+If number do not match, something has go wrong and the vote should not be considered secure.
+
+Citizen will freely choose anonymizers with a good reputation to cast their votes.
+The reputation of anonymizers may be affected by obvious disfunctionnings or complains of citizens about their participation not being published (and hence their vote being likely usurpated) or their anonymity not being respected.
+Therefore a good reputation system should be setup to assess the reputation of anonymizers.
+
+
