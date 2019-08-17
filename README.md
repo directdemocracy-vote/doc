@@ -8,13 +8,14 @@ Vote results from areas where a majority of people are citizens will become sign
 This will increase the pressure on governments to respect the democratic choices expressed by their people.
 Ultimately this bottom-up initiative will enforce direct democracy everywhere in the world.
 
-This direct democracy is based on five essentials components:
+directdemocracy.world is a decentralized system running on the internet and relying on six components:
 
 1. citizens.
 2. endorsements.
 3. trust.
 4. referendums.
 5. votes.
+6. results.
 
 ## Citizens
 
@@ -25,3 +26,5 @@ This direct democracy is based on five essentials components:
 ## Referendums
 
 ## Votes
+
+## Results
