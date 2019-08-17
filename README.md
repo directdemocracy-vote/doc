@@ -50,6 +50,8 @@ It should contain the following elements:
 - Description of the law
 - A question (usually do you agree with this proposal?)
 - A list of possible answers (usually yes/no/abstention)
+- A list of acknowledged trusters with a minimum trust level for each one.
+- A deadline for the publication of results.
 It should be published on the internet, so that everyone can see it.
 
 ### Public votes
@@ -61,13 +63,14 @@ Thefore public votes are not anonymous.
 ### Results
 
 Any organization can publish results by counting the votes published on the internet.
-The organization may filter out votes coming from citizen with a low trust level according to a reputable truster.
+The organization should filter out votes coming from citizens with a too low trust level.
 Such results can be checked by anyone.
 
 ## Anonymous voting
 
 This more complex system is similar to the public voting system.
 It guarantees the anonymity and verifiability of votes, but relies on an extra trusted component: the anonymizers.
+Optionally verifyers can be requested to assess the correct functionning of anonymizers.
 
 ### Anonymizers
 
@@ -89,4 +92,7 @@ Citizen will freely choose anonymizers with a good reputation to cast their vote
 The reputation of anonymizers may be affected by obvious disfunctionnings or complains of citizens about their participation not being published (and hence their vote being likely usurpated) or their anonymity not being respected.
 Therefore a good reputation system should be setup to assess the reputation of anonymizers.
 
+### Verifyers
 
+When sending her public key to the anonymizer, citizens should also securely send a signed copy of this key to a number of verifyers. Verifyers should be fully independent from the anonymizer.
+They can check after the results are public if an anonymizer has cheated simply by comparing the list of published public key to the ones received directly from the citizen.
