@@ -12,7 +12,7 @@ directdemocracy.world is a decentralized system running on the internet and rely
 
 1. citizens.
 2. endorsements.
-3. trust.
+3. trusters.
 4. referendums.
 5. votes.
 6. results.
@@ -21,7 +21,7 @@ directdemocracy.world is a decentralized system running on the internet and rely
 
 ## Endorsements
 
-## Trust
+## Trusters
 
 ## Referendums
 
