@@ -54,7 +54,7 @@ It should be published on the internet, so that everyone can see it.
 
 When a citizen wants to vote, she generate a new pair of private and public key specifically for this referendum.
 Then she securely sends two signed packets to the anonymizer of her choice.
-The first packet contains her vote card and the referendum.
+The first packet contains her vote card, the referendum and the anonymizer.
 The second packet contains the public key and the referendum.
 The anonymizer checks that both packets are received and that the citizen is entitled to vote (area, necessary trust level).
 If not, it declines the request of the citizen and publish a message saying it refused to allow this citizen to vote to this referendum.
@@ -65,6 +65,7 @@ The anonymizer then removes the signature from the second packet, sign it, send 
 
 The citizen selects an answer in the referendum, sign it with the private key and publish it.
 Once the vote period is over, the anonymizer publish in a random order all the public key it signed and stored.
+Citizens should also publish the same information they have received from the anonymizer.
 
 Citizen will freely choose anonymizers with a good reputation to cast their votes.
 The reputation of anonymizers may be affected by obvious disfunctionnings or complains of citizens about their participation not being published (and hence their vote being likely usurpated) or their anonymity not being respected.
@@ -73,5 +74,5 @@ Therefore a good reputation system should be setup to assess the reputation of a
 ### Verifyers
 
 Anyone can verify the information published by voters, trusters, anonymizers, etc. to detect possible frauds in the system.
-For example, anyone can check that for each anonymizer and each referendum, the number of published public keys matches the number of published vote cards/referendum packets.
+For example, for each anonymizer and each referendum, the number of published public keys should match the number of published vote cards/referendum packets.
 If numbers do not match, something has go wrong, the vote should not be considered secure and the reputation of the anonymizer should decrease.
