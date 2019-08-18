@@ -77,4 +77,4 @@ Anyone can verify the information published by voters, trusters, anonymizers, et
 For example, for each anonymizer and each referendum, the number of published public keys should match the number of published vote cards/referendum packets.
 If numbers do not match, something has go wrong, the vote should not be considered secure and the reputation of the anonymizer should decrease.
 
-![Anonymizer principle](https://github.com/directdemocracy-world/markdown-here/raw/master/vote.png "Anonymizers principle")
+![Anonymizer principle](https://raw.githubusercontent.com/directdemocracy-world/doc/master/vote.png "Anonymizers principle")
