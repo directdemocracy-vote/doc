@@ -70,29 +70,26 @@ Such results can be checked by anyone.
 
 This more complex system is similar to the public voting system.
 It guarantees the anonymity and verifiability of votes, but relies on an extra trusted component: the anonymizers.
-Optionally verifyers can be requested to assess the correct functionning of anonymizers.
 
 ### Anonymizers
 
 When a citizen wants to vote, she generate a new pair of private and public key specifically for this referendum.
-Then she securely sends two signed packets to the anonymizer.
-The first one contains her vote card and the referendum.
-The second one contains the public key.
+Then she securely sends two signed packets to the anonymizer of her choice.
+The first packet contains her vote card and the referendum.
+The second packet contains the public key.
 The anonymizer checks that both packets are received and that the citizen is entitled to vote (area, necessary trust level).
-If not, it declines the request of the citizen.
-Otherwise, the anonymizer signs the first packet and will publishes it when the vote period is over.
-That means the anonymizer handles the anonymous vote of this citizen on that referendum.
-The anonymizer then removes the signature from the second packet and save the public key in its database without any reference to the citizen.
-The citizen selects an answer in the referendum, add the public key, sign it with the private key and publish it.
-Once the vote period is over, the anonymizer publish all the public key it stored in a random order, signed with its signature.
-Anyone can then verify that the number of published public keys matches the number of published vote cards/referendum packets.
-If number do not match, something has go wrong and the vote should not be considered secure.
+If not, it declines the request of the citizen and publish a message saying it refused to allow this citizen to vote to this referendum.
+This message is also sent back to the citizen.
+Otherwise, the anonymizer signs the first packet, publishes it and sent it back to the citizen.
+This way, the anonymizer announces publicly that it handles the anonymous vote of this citizen on that referendum.
+The anonymizer then removes the signature from the second packet, sign it, send it back to the citizen and store it temporary.
+
+The citizen selects an answer in the referendum, sign it with the private key and publish it.
+Once the vote period is over, the anonymizer publish in a random order all the public key it signed and stored.
+Anyone can then verify that the number of published public keys matches the number of published vote cards/referendum packets for an anonymizer. Anyone can also check that votes
+If numbers do not match, something has go wrong and the vote should not be considered secure.
 
 Citizen will freely choose anonymizers with a good reputation to cast their votes.
 The reputation of anonymizers may be affected by obvious disfunctionnings or complains of citizens about their participation not being published (and hence their vote being likely usurpated) or their anonymity not being respected.
 Therefore a good reputation system should be setup to assess the reputation of anonymizers.
 
-### Verifyers
-
-When sending her public key to the anonymizer, citizens should also securely send a signed copy of this key to a number of verifyers. Verifyers should be fully independent from the anonymizer.
-They can check after the results are public if an anonymizer has cheated simply by comparing the list of published public key to the ones received directly from the citizen.
