@@ -8,23 +8,19 @@ Vote results from areas where a majority of people are citizens will become sign
 This will increase the pressure on governments to respect the democratic choices expressed by their people.
 Ultimately this bottom-up initiative will enforce direct democracy everywhere in the world.
 
-directdemocracy.world is a decentralized system running on the internet and providing both public and anonymous voting systems.
-
-## Public voting
-
-This simple system is relying on six components:
+directdemocracy.world is a decentralized system running on the internet and providing a voting system relying on six components:
 
 1. citizen cards.
 2. endorsements.
 3. trusters.
 4. referendums.
-5. public votes.
+5. anonymizers.
 6. results.
 
 ### Citizens cards
 
 Anybody can register to become a citizen.
-The registration process simply requires that you fill-in a citizen card with your name, picture, address, etc., sign it electronically and publish it on the internet, so that everyone can see it.
+The registration process simply requires that you fill-in a citizen card with your name, picture, GPS location of address, etc., sign it electronically and publish it on the internet, so that everyone can see it.
 No review or approval is needed.
 However, your vote wont be significant if your citizen card is not trusted.
 
@@ -54,23 +50,6 @@ It should contain the following elements:
 - A deadline for the publication of results.
 It should be published on the internet, so that everyone can see it.
 
-### Public votes
-
-A public vote is simply the content of a referendum and the choise of an answer signed by a citizen.
-A public vote should be published on the internet so that everyone can see it.
-Thefore public votes are not anonymous.
-
-### Results
-
-Any organization can publish results by counting the votes published on the internet.
-The organization should filter out votes coming from citizens with a too low trust level.
-Such results can be checked by anyone.
-
-## Anonymous voting
-
-This more complex system is similar to the public voting system.
-It guarantees the anonymity and verifiability of votes, but relies on an extra trusted component: the anonymizers.
-
 ### Anonymizers
 
 When a citizen wants to vote, she generate a new pair of private and public key specifically for this referendum.
@@ -92,4 +71,6 @@ If numbers do not match, something has go wrong and the vote should not be consi
 Citizen will freely choose anonymizers with a good reputation to cast their votes.
 The reputation of anonymizers may be affected by obvious disfunctionnings or complains of citizens about their participation not being published (and hence their vote being likely usurpated) or their anonymity not being respected.
 Therefore a good reputation system should be setup to assess the reputation of anonymizers.
+
+### Results
 
