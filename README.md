@@ -76,3 +76,4 @@ Therefore a good reputation system should be setup to assess the reputation of a
 Anyone can verify the information published by voters, trusters, anonymizers, etc. to detect possible frauds in the system.
 For example, for each anonymizer and each referendum, the number of published public keys should match the number of published vote cards/referendum packets.
 If numbers do not match, something has go wrong, the vote should not be considered secure and the reputation of the anonymizer should decrease.
+
