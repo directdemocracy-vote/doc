@@ -87,7 +87,7 @@ Citizen will freely choose anonymizers with a good reputation to cast their vote
 The reputation of anonymizers may be affected by obvious disfunctionnings or complains of citizens about their participation not being published (and hence their vote being likely usurpated) or their anonymity not being respected.
 Therefore a good reputation system should be setup to assess the reputation of anonymizers.
 
-### Verifyers
+### Verifications
 
 Anyone can verify the information published by voters, trusters, anonymizers, etc. to detect possible frauds in the system.
 For example, for each anonymizer and each referendum, the number of published public keys should match the number of published vote cards/referendum packets.
