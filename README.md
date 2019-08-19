@@ -1,21 +1,34 @@
 # suffragio
 
-suffragio aims at establishing [direct democracy](https://en.wikipedia.org/wiki/Direct_democracy) everywhere in order to bring peace, safety and prosperity to humananity, including saving the climate and the biodiversity.
-The principle is that people will become citizens by organizing referundums and voting regardless of any official acknowledgement.
-Vote results from a limited number of citizens could be considered as survey results.
-Such results could feed debates, influence political decisions and incitate more people to become citizens.
+suffragio aims at establishing world-wide [direct democracy](https://en.wikipedia.org/wiki/Direct_democracy) in order to bring peace, safety and prosperity to humananity, including saving the climate and the biodiversity.
+The principle is that people will become citizens by proposing referundums and voting regardless of any official acknowledgement.
+Vote results from a limited number of citizens could be considered as simple survey results.
+They could feed debates, influence political decisions and incitate more people to become citizens.
 Vote results from areas where a majority of people are citizens will become significant from a democratic point of view.
 This will increase the pressure on governments to respect the democratic choices expressed by their people.
 Ultimately this bottom-up initiative will enforce direct democracy everywhere in the world.
 
-suffragio is a decentralized system running on the internet and providing a voting system relying on six components:
+suffragio is a decentralized system running on the internet and providing a voting system relying on 3 types of organizations:
 
-1. citizen cards.
-2. endorsements.
-3. trusters.
-4. referendums.
-5. anonymizers.
-6. verifyers.
+1. citizens.
+2. trusters.
+3. anonymizers.
+
+and 7 data structures:
+
+1. citizen card (signed by citizens)
+2. endorsement (signed by citizens).
+3. trust (signed by trusters).
+4. referendum (hashed).
+5. vote (signed by anonymous citizen).
+6. voter list (signed by anonymizers).
+7. ballot list (signed by anomymizers).
+
+and 2 types of user interfaces implemented as open-source web services or applications.
+
+1. citizen hosting (including citizen key pair hosting), citizen card, endorsement, referendum, vote, verification.
+2. result analysis: verification, statistics and vote results.
+
 
 ### Citizens cards
 
@@ -33,9 +46,12 @@ Like citizen cards, endorsements are published on the internet so that everyone 
 
 ### Trusters
 
-Trusters are independent algorithms that process the endorsements published on the internet to generate a trust level for each citizen. Trust levels are signed by trusters and published on the internet so that everyone can see them.
+Trusters are independent algorithms that process the endorsements published on the internet to generate a reputation for each citizen. 
+Resulting reputations are signed by trusters and published on the internet so that everyone can see them.
 Any individual or organization can become a truster.
-Trusters should develop the best trust algorithm to establish a good reputation.
+Trusters also have an informal reputation which is evaluated by citizens:
+Citizen will not take part in referendums which rely on trusters they dont trust.
+So, trusters should develop the best trust algorithm to establish a good reputation for themselves.
 
 ### Referendums
 
@@ -46,7 +62,7 @@ It should contain the following elements:
 - Description of the law to be applied in the area.
 - A question (usually do you agree with this proposal?)
 - A list of possible answers (usually yes/no/abstention)
-- A list of acknowledged trusters with a minimum trust level for each one.
+- A list of acknowledged trusters with a minimum citizen reputation for each one.
 - A deadline for the publication of results.
 It should be published on the internet, so that everyone can see it.
 
@@ -56,7 +72,7 @@ When a citizen wants to vote, she generate a new pair of private and public key 
 Then she securely sends two signed packets to the anonymizer of her choice.
 The first packet contains her vote card, the referendum and the anonymizer.
 The second packet contains the public key and the referendum.
-The anonymizer checks that both packets are received and that the citizen is entitled to vote (area, necessary trust level).
+The anonymizer checks that both packets are received and that the citizen is entitled to vote (area, necessary reputation).
 If not, it declines the request of the citizen and publish a message saying it refused to allow this citizen to vote to this referendum.
 This message is also sent back to the citizen.
 Otherwise, the anonymizer signs the first packet, publishes it and sent it back to the citizen.
