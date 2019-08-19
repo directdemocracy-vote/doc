@@ -1,6 +1,6 @@
-# directdemocracy.world
+# votapopuli
 
-directdemocracy.world aims at establishing [direct democracy](https://en.wikipedia.org/wiki/Direct_democracy) everywhere in order to bring peace, safety and prosperity to humananity, including saving the climate and the biodiversity.
+votapopuli aims at establishing [direct democracy](https://en.wikipedia.org/wiki/Direct_democracy) everywhere in order to bring peace, safety and prosperity to humananity, including saving the climate and the biodiversity.
 The principle is that people will become citizens by organizing referundums and voting regardless of any official acknowledgement.
 Vote results from a limited number of citizens could be considered as survey results.
 Such results could feed debates, influence political decisions and incitate more people to become citizens.
@@ -8,7 +8,7 @@ Vote results from areas where a majority of people are citizens will become sign
 This will increase the pressure on governments to respect the democratic choices expressed by their people.
 Ultimately this bottom-up initiative will enforce direct democracy everywhere in the world.
 
-directdemocracy.world is a decentralized system running on the internet and providing a voting system relying on six components:
+votapopuli is a decentralized system running on the internet and providing a voting system relying on six components:
 
 1. citizen cards.
 2. endorsements.
@@ -77,4 +77,4 @@ Anyone can verify the information published by voters, trusters, anonymizers, et
 For example, for each anonymizer and each referendum, the number of published public keys should match the number of published vote cards/referendum packets.
 If numbers do not match, something has go wrong, the vote should not be considered secure and the reputation of the anonymizer should decrease.
 
-![Anonymizer principle](https://raw.githubusercontent.com/directdemocracy-world/doc/master/vote.png "Anonymizers principle")
+![Anonymizer principle](https://raw.githubusercontent.com/votapopuli/doc/master/vote.png "Anonymizers principle")
