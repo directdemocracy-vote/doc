@@ -8,7 +8,17 @@ Vote results from areas where a majority of people are citizens will become sign
 This will increase the pressure on governments to respect the democratic choices expressed by their people.
 Ultimately this bottom-up initiative will enforce direct democracy everywhere in the world.
 
-suffragio is a decentralized system running on the internet and providing a voting system relying on 3 types of organizations:
+suffragio is a voting system with the following properties:
+
+- open to anybody with internet access (smartphone or computer).
+- fully decentralized (nobody can control it).
+- verifyable (check that my vote was taken into account, check that others didn't cheat).
+- relying on open-source specifications and open-source software.
+- providing easy-to-use user interfaces for anybody.
+- allowing anybody to propose referendums.
+- robust to attacks (as soon as a significant network of real citizens is established).
+
+It provides a voting system relying on 3 types of organizations:
 
 1. citizens.
 2. trusters.
