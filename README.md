@@ -19,11 +19,12 @@ suffragio is a voting system with the following properties:
 - robust to attacks.
 - aimed at gaining confidence of both technical and non-technical people.
 
-It provides a voting system relying on 3 types of organizations:
+It provides a voting system relying on 4 types of participant:
 
-1. citizens.
-2. trusters.
-3. anonymizers.
+1. citizen: anybody with internet access.
+2. initiant (referendum issuer): anybody with internet access.
+3. truster: anybody with computer science knowledge and computer network resources.
+4. anonymizer: anybody with computer science knowledge and computer network resources.
 
 and 7 data structures:
 
