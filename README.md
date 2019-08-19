@@ -14,9 +14,10 @@ suffragio is a voting system with the following properties:
 - fully decentralized (nobody can control it).
 - verifyable (check that my vote was taken into account, check that others didn't cheat).
 - relying on open-source specifications and open-source software.
-- providing easy-to-use user interfaces for anybody.
+- providing easy-to-use user interfaces.
 - allowing anybody to propose referendums.
-- robust to attacks (as soon as a significant network of real citizens is established).
+- robust to attacks.
+- aimed at gaining confidence of both technical and non-technical people.
 
 It provides a voting system relying on 3 types of organizations:
 
