@@ -28,9 +28,9 @@ It provides a voting system relying on 4 types of participant:
 
 and 7 data structures:
 
-1. citizen card (signed by citizens)
-2. endorsement (signed by citizens).
-3. trust (signed by trusters).
+1. [citizen card](citizen_card.md) (signed by citizens)
+2. [endorsement](endorsement.md) (signed by citizens).
+3. [trust][trust.md] (signed by trusters).
 4. referendum (hashed).
 5. vote (signed by anonymous citizen).
 6. voter list (signed by anonymizers).
