@@ -30,11 +30,11 @@ and 7 data structures:
 
 1. [citizen card](citizen_card.md) (signed by citizens)
 2. [endorsement](endorsement.md) (signed by citizens).
-3. [trust][trust.md] (signed by trusters).
-4. referendum (hashed).
-5. vote (signed by anonymous citizen).
-6. voter list (signed by anonymizers).
-7. ballot list (signed by anomymizers).
+3. [trust](trust.md) (signed by trusters).
+4. [referendum](referendum.md) (hashed).
+5. [vote](vote.md) (signed by anonymous citizen).
+6. [voter list](voter_list.md) (signed by anonymizers).
+7. [ballot list](ballot_list.md) (signed by anomymizers).
 
 and 2 types of user interfaces implemented as open-source web services or applications.
 
