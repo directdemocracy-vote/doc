@@ -9,10 +9,10 @@ identity:
   longitude: -73.9934037
   birthday: 1970-12-31
   address:
-    streetAddress: 21 2nd Avenue
+    street: 21 2nd Avenue
     city: New York
     state: NY
-    postalCode: 10003
+    zip: 10003
     country: USA
 key: my_public_key
 signature: my_signature
