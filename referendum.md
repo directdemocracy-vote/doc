@@ -8,7 +8,7 @@ answers:
 - yes
 - no
 - abstain
-deadline: date
+deadline: 2020-01-31
 areas:
 - type: city
   name: Paris
