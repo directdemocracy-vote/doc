@@ -33,7 +33,7 @@ and 7 data structures:
 3. [trust](trust.md) (signed by trusters).
 4. [referendum](referendum.md) (signed by anybody).
 5. [vote](vote.md) (signed by anonymous citizen).
-6. [voter list](voter_list.md) (signed by anonymizers).
+6. [voter](voter.md) (signed by anonymizers).
 7. [ballot list](ballot_list.md) (signed by anomymizers).
 
 and 2 types of user interfaces implemented as open-source web services or applications.
