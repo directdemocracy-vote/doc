@@ -1,6 +1,14 @@
 # referendum
 
 ```yaml
+title: my referendum
+description: my description
+question: do you agree?
+answers:
+- yes
+- no
+- abstain
+deadline: date
 area:
 - - x1
   - y1
@@ -10,14 +18,6 @@ area:
 - - x1
   - y2
   - etc.
-title: my referendum
-description: my description
-question: do you agree?
-answers:
-- yes
-- no
-- abstain
-deadline: date
 key: my_public_key
 signature: my_signature
 ```
