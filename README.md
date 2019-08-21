@@ -31,7 +31,7 @@ and 7 data structures:
 1. [citizen card](citizen_card.md) (signed by citizens)
 2. [endorsement](endorsement.md) (signed by citizens).
 3. [trust](trust.md) (signed by trusters).
-4. [referendum](referendum.md) (hashed).
+4. [referendum](referendum.md) (signed by anybody).
 5. [vote](vote.md) (signed by anonymous citizen).
 6. [voter list](voter_list.md) (signed by anonymizers).
 7. [ballot list](ballot_list.md) (signed by anomymizers).
