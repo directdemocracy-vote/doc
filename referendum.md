@@ -25,9 +25,10 @@ areas:
  - type: country
    name: Switzerland
 trusters:
-- truster1_public_key
-  truster1
-- truster2_public_key
+- key: truster1_public_key
+  trust: truster1_trust_level
+- key: truster2_public_key
+  trust: truster2_trust_level
 key: my_public_key
 signature: my_signature
 ```
