@@ -26,9 +26,9 @@ areas:
    name: Switzerland
 trusters:
 - key: truster1_public_key
-  trust: truster1_trust_level
+  trust: 0.9
 - key: truster2_public_key
-  trust: truster2_trust_level
+  trust: 0.7
 key: my_public_key
 signature: my_signature
 ```
