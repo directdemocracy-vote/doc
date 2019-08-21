@@ -1,14 +1,19 @@
 # citizen card
 
-| field       | data type           |
-| ----------- | ------------------- |
-| family name | [string](string.md) |
-| given name  | [string](string.md) |
-| picture     | image               |
-| birth year  | 16-bit integer      |
-| birth month | 8-bit integer       |
-| birth day   | 8 bit integer       |
-| latitude    | float     |
-| longitute   | float     |
-| public key  | key       |
-| signature   | signature |
+```yaml
+identity:
+  familyName: Smith
+  givenName: John
+  picture: base64encodedjpegpicture
+  latitude: 32.232983631
+  longitude: 23.220986543
+  birthday: 1970-12-31
+  address:
+    - streetAddress: 21 2nd Street
+    - city: New York
+    - state: NY
+    - postalCode: 10021
+    - country: USA
+key: key
+signature: signature
+```
