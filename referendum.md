@@ -20,7 +20,7 @@ areas:
     - etc.
   - - x1
     - y2
-    -  etc.
+    - etc.
   - etc.
  - type: country
    name: Switzerland
