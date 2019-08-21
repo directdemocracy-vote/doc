@@ -4,7 +4,7 @@
 identity:
   familyName: Smith
   givenName: John
-  picture: base64encodedjpegpicture
+  picture: base64_encoded_jpeg_picture
   latitude: 40.7247239
   longitude: -73.9934037
   birthday: 1970-12-31
