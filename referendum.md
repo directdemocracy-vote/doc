@@ -29,6 +29,6 @@ trusters:
   trust: 0.9
 - key: truster2_public_key
   trust: 0.7
-key: my_public_key
-signature: my_signature
+key: referendum_public_key
+signature: referendum_signature
 ```
