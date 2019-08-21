@@ -14,6 +14,6 @@ identity:
     - state: NY
     - postalCode: 10003
     - country: USA
-key: key
-signature: signature
+key: my_public_key
+signature: my_signature
 ```
