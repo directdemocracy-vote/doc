@@ -1,8 +1,8 @@
 # trust
 
-| field              | data type |
-| ------------------ | --------- |
-| citizen public key | key       |
-| trust              | float     |
-| truster public key | key       |
-| truster signature  | signature |
+```yaml
+citizen: citizen_public_key
+trust: 0.89
+key: truster_public_key
+signature: truster_signature
+```
