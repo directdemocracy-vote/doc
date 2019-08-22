@@ -8,18 +8,18 @@ $id: https://directdemocracy.net/json-schema/1.0/referendum.schema.json
 title: referendum
 description: referendum proposing a new law or a change in some existing law
 type: object
-required: [key, signature, edited, title, description, question, answers, deadline, areas, trusters]
+required: [key, signature, published, title, description, question, answers, deadline, areas, trusters]
 properties:
   key:
-    description: public key of the truster
+    description: public key of the author of the referendum
     type: string
     contentEncoding: base64
   signature:
-    description: signature of the trust by the truster
+    description: signature of the author of the referendum
     type: string
     contentEncoding: base64
-  edited:
-    description: date of the last modification or creation of the trust
+  published:
+    description: date of the publication of the referendum
     type: string
     format: date-time
   title:
@@ -87,7 +87,7 @@ properties:
 ```yaml
 key: referendum_public_key
 signature: referendum_signature
-edited: 2019-09-12T12:33:21+00:00
+published: 2019-09-12T12:33:21+00:00
 title: my referendum
 description: my description
 question: do you agree?
