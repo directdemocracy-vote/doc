@@ -45,6 +45,6 @@ key: truster_public_key
 signature: truster_signature
 citizen: citizen_public_key
 trust: 0.89
-edited: 2019-11-01T08:12:23+00.00
+edited: 2019-11-01T08:12:23+00:00
 validity: 31577600
 ```
