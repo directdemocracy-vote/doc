@@ -26,7 +26,7 @@ properties:
     description: title of the referendum
     type: string
   description:
-    description: detailed description of the referendum (markdown language allowed)
+    description: detailed description of the referendum (markdown allowed)
     type: string
   question:
     description: question to which the citizen should answer
@@ -47,7 +47,7 @@ properties:
       description: area
       properties:
         type:
-          description: type of area (city, department, state, county, country)
+          description: type of area (city, department, state, county, country, etc.)
           type: string
         name:
           description: name of the area
