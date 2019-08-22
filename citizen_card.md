@@ -8,8 +8,20 @@ $id: https://directdemocracy.net/json-schema/citizen_card.schema.json
 title: citizen card
 description: information allowing to identify uniquely a citizen
 type: object
-required: [familyName, givenName, picture, latitude, longitude, edited, key, signature]
+required: [key, signature, edited, familyName, givenName, picture, latitude, longitude]
 properties:
+   key:
+     description: public key of the citizen
+     type: string
+     contentEncoding: base64
+   signature:
+     description: signature of the identidy card by the citizen
+     type: string
+     contentEncoding: base64
+   edited:
+     description: date of the last modification or creation of the citizen card
+     type: string
+     format: date-time
   familyName:
     description: last name of the citizen
     type: string
@@ -31,18 +43,6 @@ properties:
      type: number
      minimum: -180
      maximum: 180
-   edited:
-     description: date of the last modification or creation of the citizen card
-     type: string
-     format: date-time
-   key:
-     description: public key of the citizen
-     type: string
-     contentEncoding: base64
-   signature:
-     description: signature of the identidy card by the citizen
-     type: string
-     contentEncoding: base64
    birthday:
      description: the birthday of the citizen
      type: string
@@ -71,20 +71,19 @@ properties:
 # example:
 
 ```yaml
-identity:
-  familyName: Smith
-  givenName: John
-  picture: base64_encoded_jpeg_picture
-  latitude: 40.7247239
-  longitude: -73.9934037
-  edited: 2019-08-02T20:20:39+00:00
-  birthday: 1970-12-31
-  address:
-    street: 21 2nd Avenue
-    city: New York
-    state: NY
-    zip: 10003
-    country: USA
 key: my_public_key
 signature: my_signature
+edited: 2019-08-02T20:20:39+00:00
+familyName: Smith
+givenName: John
+picture: base64_encoded_jpeg_picture
+latitude: 40.7247239
+longitude: -73.9934037
+birthday: 1970-12-31
+address:
+  street: 21 2nd Avenue
+  city: New York
+  state: NY
+  zip: 10003
+  country: USA
 ```
