@@ -22,19 +22,22 @@ suffragio is a voting system with the following properties:
 It provides a voting system relying on 4 types of participant:
 
 1. citizen: anybody with internet access.
-2. initiant (referendum issuer): anybody with internet access.
+2. referendum author: anybody with internet access.
 3. truster: anybody with computer science knowledge and computer network resources.
 4. anonymizer: anybody with computer science knowledge and computer network resources.
 
-and 7 data structures:
+Each participant has a pair of private/public key allowing her to sign and be identified.
 
-1. [citizen card](citizen_card.md) (signed by citizens)
-2. [endorsement](endorsement.md) (signed by citizens).
-3. [trust](trust.md) (signed by trusters).
-4. [referendum](referendum.md) (signed by anybody).
-5. [vote](vote.md) (signed by anonymous citizen).
-6. [voter](voter.md) (signed by anonymizers).
-7. [ballots](ballots.md) (signed by anomymizers).
+The system relies on 8 data structures:
+
+1. [citizen card](citizen_card.md) (signed by a citizen)
+2. [endorsement](endorsement.md) (signed by a citizen).
+3. [trust](trust.md) (signed by a truster).
+4. [referendum](referendum.md) (signed by a referendum author).
+5. [vote](vote.md) (signed by an anonymized citizen).
+6. [voter](voter.md) (signed by an anonymizer).
+7. [ballots](ballots.md) (signed by an anomymizer).
+8. [revocation](revocation.md) (signed by a participant)
 
 and 2 types of user interfaces implemented as open-source web services or applications.
 
