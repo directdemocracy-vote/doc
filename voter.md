@@ -1,5 +1,11 @@
 # voter
 
+## format
+
+
+
+## example
+
 ```yaml
 referedum: referendum_public_key
 voter: citizen324_public_key
