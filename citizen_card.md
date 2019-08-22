@@ -83,7 +83,7 @@ properties:
         type: string
 ```
 
-# example:
+# example
 
 ```yaml
 key: my_public_key
