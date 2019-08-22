@@ -36,7 +36,7 @@ properties:
 ```yaml
 key: ballot_public_key
 signature: ballot_signature
-edited: 2020-01-12T20:20:02+00:00
+published: 2020-01-12T20:20:02+00:00
 referendum: public_key_of_referendum
 answer: yes
 ```
