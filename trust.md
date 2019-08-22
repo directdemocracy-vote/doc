@@ -8,7 +8,7 @@ $id: https://directdemocracy.net/json-schema/1.0/trust.schema.json
 title: trust
 description: trust attributed to a citizen card by a truster
 type: object
-required: [key, signature, edited, citizen, trust, validity]
+required: [key, signature, published, citizen, trust, validity]
 properties:
   key:
     description: public key of the truster
@@ -18,8 +18,8 @@ properties:
     description: signature of the trust by the truster
     type: string
     contentEncoding: base64
-  edited:
-    description: date of the last modification or creation of the trust
+  published:
+    description: date of publication of the trust
     type: string
     format: date-time
   citizen:
@@ -43,7 +43,7 @@ properties:
 ```yaml
 key: truster_public_key
 signature: truster_signature
-edited: 2019-11-01T08:12:23+00:00
+published: 2019-11-01T08:12:23+00:00
 citizen: citizen_public_key
 trust: 0.89
 validity: 31577600
