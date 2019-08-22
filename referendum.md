@@ -1,6 +1,93 @@
 # referendum
 
+# format
+
 ```yaml
+$schema: http://json-schema.org/draft-07/schema#
+$id: https://directdemocracy.net/json-schema/1.0/referendum.schema.json
+title: referendum
+description: referendum proposing a new law or a change in some existing law
+type: object
+required: [key, signature, edited, title, description, question, answers, deadline, areas, trusters]
+properties:
+  key:
+    description: public key of the truster
+    type: string
+    contentEncoding: base64
+  signature:
+    description: signature of the trust by the truster
+    type: string
+    contentEncoding: base64
+  edited:
+    description: date of the last modification or creation of the trust
+    type: string
+    format: date-time
+  title:
+    description: title of the referendum
+    type: string
+  description:
+    description: detailed description of the referendum (markdown language allowed)
+    type: string
+  question:
+    description: question to which the citizen should answer
+    type: string
+  answers:
+    description: possible answers to the above question, typically, yes, no, abstain
+    type: array
+    items:
+      type: string
+  deadline:
+    type: string
+    format: date-time
+  areas:
+    description: areas in which the citizen should live to vote for this referendum
+    type: array
+    items:
+      type: object
+      description: area
+      properties:
+        type:
+          description: type of area (city, department, state, county, country)
+          type: string
+        name:
+          description: name of the area
+          type: string
+        polygons:
+          description: polygons of GPS coordinates points defining the area
+          type: array
+          items:
+            type: array
+            items:
+              type: number
+  trusters:
+    description: trusters that should be used to process this referendum
+    type: array
+    items:
+      type: object
+      properties:
+        key:
+          description: public key of the truster
+          type: string
+          contentEncoding: base64
+        trust:
+          description: minimum trust from this truster necessary to vote for this referendum
+          type: number
+          minimum: 0
+  websites:
+    description: websites providing more information about the referendum
+    type: array
+    items:
+      type: string
+      format: uri
+    
+```
+
+# exemple
+
+```yaml
+key: referendum_public_key
+signature: referendum_signature
+edited: 2019-09-12T12:33:21+00:00
 title: my referendum
 description: my description
 question: do you agree?
@@ -29,6 +116,7 @@ trusters:
   trust: 0.9
 - key: truster2_public_key
   trust: 0.7
-key: referendum_public_key
-signature: referendum_signature
+websites:
+- https://www.myreferendum.com
+- https://www.my-referendum.net
 ```
