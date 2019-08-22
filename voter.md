@@ -37,6 +37,7 @@ properties:
 ```yaml
 key: anonymizer_public_key
 signature: anonymiser_signature
+published: 2019-11-23T21:21:33+00:00
 referedum: referendum_public_key
 citizen: citizen324_public_key
 ```
