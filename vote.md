@@ -8,7 +8,7 @@ $id: https://directdemocracy.net/json-schema/1.0/vote.schema.json
 title: vote
 description: vote casted by a citizen for a referendum
 type: object
-required: [key, signature, edited, referendum, answer]
+required: [key, signature, published, referendum, answer]
 properties:
   key:
     description: public key of the ballot
@@ -18,8 +18,8 @@ properties:
     description: signature of the ballot
     type: string
     contentEncoding: base64
-  edited:
-    description: date at which the vote was casted
+  published:
+    description: date at which the vote was published
     type: string
     format: date-time
   referendum:
