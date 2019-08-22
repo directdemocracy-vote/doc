@@ -18,8 +18,8 @@ properties:
     description: signature of the identidy card by the citizen
     type: string
     contentEncoding: base64
-  edited:
-    description: date of the last modification or creation of the citizen card
+  published:
+    description: date of publication of the citizen card
     type: string
     format: date-time
   familyName:
@@ -88,7 +88,7 @@ properties:
 ```yaml
 key: my_public_key
 signature: my_signature
-edited: 2019-08-02T20:20:39+00:00
+published: 2019-08-02T20:20:39+00:00
 familyName: Smith
 givenName: John
 picture: base64_encoded_jpeg_picture
