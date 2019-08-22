@@ -1,6 +1,17 @@
 # citizen card
 
 ```yaml
+$schema: http://json-schema.org/schema#
+title: citizen card
+type: object
+required: [id, name, price]
+properties
+  id:
+    type: number
+    description: Product identifier
+```
+
+```yaml
 identity:
   familyName: Smith
   givenName: John
