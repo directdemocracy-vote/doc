@@ -8,18 +8,18 @@ $id: https://directdemocracy.net/json-schema/1.0/endorsement.schema.json
 title: endorsement
 description: claim that a citizen (endorser) acknowledges the accuracy and uniqueness of the citizen card of another citizen (endorsed)
 type: object
-required: [key, signature, edited, citizen, trust]
+required: [key, signature, published, citizen, trust]
 properties:
   key:
-    description: public key of the citizen
+    description: public key of the endorser
     type: string
     contentEncoding: base64
   signature:
-    description: signature of the identidy card by the citizen
+    description: signature of the endorser
     type: string
     contentEncoding: base64
-  edited:
-    description: date of the last modification or creation of the citizen card
+  published:
+    description: date of publication of the endorsement
     type: string
     format: date-time
   citizen:
@@ -45,7 +45,7 @@ properties:
 ```yaml
 key: my_public_key
 signature: my_signature
-edited: 2019-08-21T21:12:00+00.00
+published: 2019-08-21T21:12:00+00.00
 ciziten: public_key_of_the_endorsed_citizen
 trust: 0.99
 comment: he is my brother
