@@ -1,5 +1,7 @@
 # citizen card
 
+## format
+
 ```yaml
 $schema: http://json-schema.org/draft-07/schema#
 $id: https://directdemocracy.net/json-schema/citizen_card.schema.json
@@ -66,7 +68,7 @@ properties:
          type: string
 ```
 
-example:
+# example:
 
 ```yaml
 identity:
