@@ -8,7 +8,7 @@ $id: https://directdemocracy.net/json-schema/1.0/voter.schema.json
 title: voter
 description: citizen who voted in a referendum
 type: object
-required: [key, signature, referendum, citizen]
+required: [key, signature, published, referendum, citizen]
 properties:
   key:
     description: public key of the anonymizer
@@ -18,6 +18,10 @@ properties:
     description: signature of the anonymizer
     type: string
     contentEncoding: base64
+  published:
+    description: date at which the voter was published
+    type: string
+    format: date-time
   referendum:
     description: public key of the referendum
     type: string
