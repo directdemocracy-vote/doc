@@ -2,10 +2,12 @@
 
 ## description
 
-Endorsements are used by citizens to endorse cards, referendums, anonymizers and trusters.
-Endorsements are also used by trusters to endorse citizens, referendums, anonymizers and other trusters.
-The algorithms used by trusters rely on publications, including endorsements, to generate their own endorsements.
-Referendums and anonymizers should not generate endorsements.
+Endorsements are published by citizens to endorse others' cards, referendums, anonymizers and trusters.
+If set, the revoke field means that any previous endorsement of the same participant should be disregarded.
+A citizen can endorse her own card with a revoke field set to publicly discard it and possibly create a new one with a new key.
+Endorsements are also published by trusters to endorse citizens, referendums, anonymizers and other trusters.
+The algorithms used by trusters rely on publications, including endorsements, to publish their own endorsements.
+Referendums and anonymizers should not publish any endorsement.
 
 ## format
 
