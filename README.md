@@ -26,7 +26,7 @@ It provides a voting system relying on 4 types of participant:
 3. truster: anybody with computer science knowledge and computer network resources.
 4. anonymizer: anybody with computer science knowledge and computer network resources.
 
-Each participant has a pair of private/public key allowing her to sign and be identified.
+Each participant has a pair of private/public cryptographic key allowing her to sign and be identified.
 
 The system relies on 7 types of [publication](publication.md):
 
@@ -47,16 +47,18 @@ and 2 types of user interfaces implemented as open-source web services or applic
 ### Cards
 
 Anybody can register to become a citizen.
-The registration process simply requires that you fill-in a citizen card with your name, picture, GPS location of home, etc., sign it electronically and publish it on the internet, so that everyone can see it.
+The registration process simply requires that you publish a digitally signed card with your name, picture, GPS location of home, etc.
 No review or approval is needed.
 However, you won't be able to vote if your citizen card is not endorsed by a reputed truster.
 
 ### Endorsements
 
-As a registered citizen, you can endorse other citizens by reviewing and signing electronically their citizen card.
-The review process is a questionnaire in which you will assess the accuracy of the information provided on other's citizen card.
-Obviously, you should assess only people you know well and can meet in person.
-Like citizen cards, endorsements are published on the internet so that everyone can see them.
+As a registered citizen, you can endorse other citizens by reviewing and signing electronically their card.
+The review process is a questionnaire in which you will assess the accuracy of the information provided on the card.
+If you answer yes to every question, you should endorse the card.
+Question includes: "Do you know well the person?" or "Did you meet physically the person recently?". 
+Like cards, endorsements are published on the internet so that everyone can see them.
+Citizens and trusters can endorse any other partipant.
 
 ### Trusters
 
@@ -76,7 +78,7 @@ It should contain the following elements:
 - Description of the law to be applied in the area.
 - A question (usually do you agree with this proposal?)
 - A list of possible answers (usually yes/no/abstention)
-- A list of acknowledged trusters with a minimum citizen reputation for each one.
+- A list of accepted trusters.
 - A deadline for the publication of results.
 It should be published on the internet, so that everyone can see it.
 
@@ -86,7 +88,7 @@ When a citizen wants to vote, she generate a new pair of private and public key 
 Then she securely sends two signed packets to the anonymizer of her choice.
 The first packet contains her vote card, the referendum and the anonymizer.
 The second packet contains the public key and the referendum.
-The anonymizer checks that both packets are received and that the citizen is entitled to vote (area, necessary reputation).
+The anonymizer checks that both packets are received and that the citizen is entitled to vote (area, truster endorsement).
 If not, it declines the request of the citizen and publish a message saying it refused to allow this citizen to vote to this referendum.
 This message is also sent back to the citizen.
 Otherwise, the anonymizer signs the first packet, publishes it and sent it back to the citizen.
