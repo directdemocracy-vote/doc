@@ -1,11 +1,21 @@
-# citizen card
+# card
+
+## description
+
+A card should identify a citizen, allowing other citizens to endorse her.
+Trusters will endorse cards they believe are correct.
+Citizens should not publish cards with too much information, e.g., documents, address, sex, birthday, etc.
+Rather, they should provide only information they agree to disclose publicly and that can be easily checked by others.
+For exemple, it's easier and generally sufficient to publish a single document.
+But publishing no document is perfectly fine as well.
+Also, the address is really not needed since the latitude and longitude fields are more acurate and mandatory.
 
 ## format
 
 ```yaml
 $schema: http://json-schema.org/draft-07/schema#
-$id: https://directdemocracy.net/json-schema/1.0/citizen_card.schema.json
-title: citizen card
+$id: https://directdemocracy.net/json-schema/1.0/card.schema.json
+title: card
 description: information allowing to identify uniquely a citizen
 type: object
 required: [key, signature, edited, familyName, givenName, picture, latitude, longitude]
@@ -15,7 +25,7 @@ properties:
     type: string
     contentEncoding: base64
   signature:
-    description: signature of the identidy card by the citizen
+    description: signature of the card by the citizen
     type: string
     contentEncoding: base64
   published:
@@ -43,31 +53,33 @@ properties:
     type: number
     minimum: -180
     maximum: 180
-  id:
-    description: national ID card number
-    type: string
-  passport:
-    description: passport number
-    type: string
-  vote:
-    description: national vote card number
-    type: string
-  driving:
-    description: natioanl driving license number
-    type: string
-  insurance:
-    description: national social insurance number
-    type: string
+  documents:
+    description: documents to be checked by citizen endorsers
+    type: array
+    items:
+      type: object
+      required: [type, issuer, number]
+      properties:
+        type:
+          description: type of document (ID card, passport, vote card, driving license, insurance card)
+          type: string
+          pattern: ^id$|^passport$|^vote$|^driving$|^insurance$
+        issuer:
+          description: country or organization that issued the document and ensure the uniqueness of the citizen
+          type: string
+        number:
+          description: number uniquely identifying the citizen
+          type: string
   birthday:
     description: the birthday of the citizen
     type: string
     format: date
   sex:
-    description: sex of the citizen: M for male, F for female, O for other
+    description: sex of the citizen
     type: string
-    pattern: ^[MFO]$
+    pattern: ^male$|^female$|^other$
   address:
-    description: address of the home of the citizen
+    description: home address of the citizen
     type: object
     required: [street, city, country]
     properties:
@@ -94,7 +106,10 @@ givenName: John
 picture: base64_encoded_jpeg_picture
 latitude: 40.7247239
 longitude: -73.9934037
-passport: C03005988
+document:
+- type: passport
+  issuer: USA
+  number: C03005988
 birthday: 1970-12-31
 address:
   street: 21 2nd Avenue
