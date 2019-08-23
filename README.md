@@ -28,16 +28,15 @@ It provides a voting system relying on 4 types of participant:
 
 Each participant has a pair of private/public key allowing her to sign and be identified.
 
-The system relies on 8 data structures:
+The system relies on 7 types of [publication](publication.md):
 
-1. [citizen card](citizen_card.md) (signed by a citizen)
+1. [card](card.md) (signed by a citizen)
 2. [endorsement](endorsement.md) (signed by a citizen).
 3. [trust](trust.md) (signed by a truster).
 4. [referendum](referendum.md) (signed by a referendum author).
 5. [vote](vote.md) (signed by an anonymized citizen).
 6. [voter](voter.md) (signed by an anonymizer).
 7. [ballots](ballots.md) (signed by an anomymizer).
-8. [revocation](revocation.md) (signed by a participant)
 
 and 2 types of user interfaces implemented as open-source web services or applications.
 
