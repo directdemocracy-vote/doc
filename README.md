@@ -44,12 +44,12 @@ and 2 types of user interfaces implemented as open-source web services or applic
 2. result analysis: verification, statistics and vote results.
 
 
-### Citizens cards
+### Cards
 
 Anybody can register to become a citizen.
-The registration process simply requires that you fill-in a citizen card with your name, picture, GPS location of address, etc., sign it electronically and publish it on the internet, so that everyone can see it.
+The registration process simply requires that you fill-in a citizen card with your name, picture, GPS location of home, etc., sign it electronically and publish it on the internet, so that everyone can see it.
 No review or approval is needed.
-However, your vote wont be significant if your citizen card is not trusted.
+However, you won't be able to vote if your citizen card is not endorsed by a reputed truster.
 
 ### Endorsements
 
