@@ -38,11 +38,10 @@ The system relies on 7 types of [publication](publication.md):
 6. [voter](voter.md) (signed by an anonymizer).
 7. [ballots](ballots.md) (signed by an anomymizer).
 
-and 2 types of user interfaces implemented as open-source web services or applications.
+and 2 types of user interfaces implemented as open-source web services or applications:
 
-1. citizen hosting (including citizen key pair hosting), citizen card, endorsement, referendum, vote, verification.
-2. result analysis: verification, statistics and vote results.
-
+1. [helper](helper.md): citizen key pair hosting, citizen card, endorsement, referendum, vote, verification.
+2. [publisher](publisher.md): display public information, including vote results, statistics, analysis, verifications, etc.
 
 ### Cards
 
