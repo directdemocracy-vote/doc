@@ -26,7 +26,7 @@ It provides a voting system relying on 4 types of participant:
 3. truster: anybody with computer science knowledge and computer network resources.
 4. anonymizer: anybody with computer science knowledge and computer network resources.
 
-Each participant has a pair of private/public cryptographic key allowing her to sign and be identified.
+Each participant has a pair of [private/public cryptographic keys](cryptography.md) allowing her to sign and be identified.
 
 The system relies on 7 types of [publication](publication.md):
 
