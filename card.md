@@ -2,8 +2,13 @@
 
 ## description
 
-A card should identify a citizen, allowing other citizens to endorse her.
+A card should identify uniquely a citizen.
+Anybody can register a card become a citizen.
+The registration process simply requires that you publish a digitally signed card with your name, picture, GPS location of home, etc.
+No review or approval is needed.
+However, you won't be able to vote if your citizen card is not endorsed by a reputed truster.
 Trusters will endorse cards they believe are correct.
+Citizens should help trusters by endorsing the cards of other citizens they personnaly know.
 Citizens should not publish cards with too much information, e.g., documents, address, sex, birthday, etc.
 Rather, they should provide only information they agree to disclose publicly and that can be easily checked by others.
 For exemple, it's easier and generally sufficient to publish a single document.
