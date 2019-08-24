@@ -13,12 +13,12 @@
 	],
 	"properties": {
 		"key": {
-			"description": "public key of the anonymizer",
+			"description": "public key of the station",
 			"type": "string",
 			"contentEncoding": "base64"
 		},
 		"signature": {
-			"description": "signature of the anonymizer",
+			"description": "signature of the station",
 			"type": "string",
 			"contentEncoding": "base64"
 		},
