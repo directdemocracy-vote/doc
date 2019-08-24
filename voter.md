@@ -11,11 +11,11 @@ type: object
 required: [key, signature, published, referendum, citizen]
 properties:
   key:
-    description: public key of the anonymizer
+    description: public key of the station
     type: string
     contentEncoding: base64
   signature:
-    description: signature of the anonymizer
+    description: signature of the station
     type: string
     contentEncoding: base64
   published:
@@ -35,8 +35,8 @@ properties:
 ## example
 
 ```yaml
-key: anonymizer_public_key
-signature: anonymiser_signature
+key: station_public_key
+signature: station_signature
 published: 2019-11-23T21:21:33+00:00
 referedum: referendum_public_key
 citizen: citizen324_public_key
