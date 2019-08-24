@@ -8,7 +8,7 @@ $id: https://directdemocracy.net/json-schema/1.0/trust.schema.json
 title: trust
 description: trust attributed to a citizen card by a truster
 type: object
-required: [key, signature, published, citizen, trust, validity]
+required: [key, signature, published, citizen, validity]
 properties:
   key:
     description: public key of the truster
@@ -26,16 +26,9 @@ properties:
     description: public key of the trusted citizen
     type: string
     contentEncoding: base64
-  trust:
-    description: level of confidence of the truster on the existance of the citizen, uniqueness and accuracy of the citizen card
-    type: number
-    minimum: 0
   valididy:
     description: duration expressed in seconds after which this trust should be considered invalid
     type: integer
-  comment:
-    description: justification of the trust value
-    type: string
 ```
 
 ## example
@@ -45,6 +38,5 @@ key: truster_public_key
 signature: truster_signature
 published: 2019-11-01T08:12:23+00:00
 citizen: citizen_public_key
-trust: 0.89
 validity: 31577600
 ```
