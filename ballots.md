@@ -6,16 +6,16 @@
 $schema: http://json-schema.org/draft-07/schema#
 $id: https://directdemocracy.net/json-schema/1.0/ballots.schema.json
 title: ballots
-description: list of ballots used for a referedum by an anonymizer
+description: list of ballots used for a referedum by a station
 type: object
 required: [key, signature, published, referendum, citizen]
 properties:
   key:
-    description: public key of the anonymizer
+    description: public key of the station
     type: string
     contentEncoding: base64
   signature:
-    description: signature of the anonymizer
+    description: signature of the station
     type: string
     contentEncoding: base64
   published:
@@ -38,8 +38,8 @@ properties:
 ## example
 
 ```yaml
-key: anonymizer_public_key
-signature: anonymizer_signature
+key: station_public_key
+signature: station_signature
 published: 2020-02-21T08:00:00+00:00
 referendum: referendum_public_key
 ballots:
