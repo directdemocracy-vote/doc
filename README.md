@@ -43,13 +43,6 @@ and 2 types of user interfaces implemented as open-source web services or applic
 1. [helper](helper.md): citizen key pair hosting, citizen card, endorsement, referendum, vote, verification.
 2. [publisher](publisher.md): display public information, including vote results, statistics, analysis, verifications, etc.
 
-### Cards
-
-Anybody can register to become a citizen.
-The registration process simply requires that you publish a digitally signed card with your name, picture, GPS location of home, etc.
-No review or approval is needed.
-However, you won't be able to vote if your citizen card is not endorsed by a reputed truster.
-
 ### Endorsements
 
 As a registered citizen, you can endorse other citizens by reviewing and signing electronically their card.
