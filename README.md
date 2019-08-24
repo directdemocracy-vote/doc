@@ -36,7 +36,7 @@ The system relies on 7 types of [publication](publication.md):
 4. [referendum](referendum.md) (signed by a referendum author).
 5. [vote](vote.md) (signed by an anonymized citizen).
 6. [voter](voter.md) (signed by a station).
-7. [ballots](ballots.md) (signed by an anomymizer).
+7. [ballots](ballots.md) (signed by a station).
 
 and 2 types of user interfaces implemented as open-source web services or applications:
 
