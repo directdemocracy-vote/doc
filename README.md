@@ -1,6 +1,6 @@
 # Suffragio
 
-## Overview
+## 1 Overview
 
 Suffragio aims at establishing world-wide [direct democracy](https://en.wikipedia.org/wiki/Direct_democracy) in order to bring peace, safety and prosperity to humananity, including saving the climate and the biodiversity.
 The principle is that people will become citizens by proposing referundums and voting regardless of any official acknowledgement.
@@ -21,7 +21,7 @@ Suffragio is a voting system with the following properties:
 - robust to attacks.
 - aimed at gaining confidence of both technical and non-technical people.
 
-## Components
+## 2 Components
 
 It provides a voting system relying on 6 types of participant:
 
@@ -43,11 +43,36 @@ The system relies on 6 types of [publication](publication.md):
 5. [voter](voter.md) (signed by a station).
 6. [ballots](ballots.md) (signed by a station).
 
-## Workflow
+## 3 Workflows
+
+### 3.1 Web of Trust
+
+*Participants:* citizens, trusters, publishers, hosts.
+*Publications:* cards, endorsements.
+
+The web of trust aims at establising a web of trust between citizens, with the help of endorsements and trusters.
+The goal of this web of trust is to ensure that each endorsed card correspond to a unique citizen who can take part in a vote.
+
+1. Each citizen should publish a card with their personal information.
+2. Each citizen should endorse several other citizens they personnaly know to create a web of endorsements.
+3. Trusters should use the resulting web of endorsements to endorse all the cards corresponding to a unique citizen.
+
+### 3.2 Referendum Setup
+
+*Participants:* authors, trusters, publishers, hosts.
+*Publications*: referendums.
+
+### 3.3 Vote Process
+
+*Participants:* citizens, stations, trusters, hosts.
+*Publications:* vote, voter, ballots.
 
 <img src="https://raw.githubusercontent.com/suffragio/doc/master/vote.png" alt="Station workflow" width="561"/>
 
-## Verifications
+### 3.4 Verifications
+
+*Participants:* publishers, trusters.
+*Publications:* N/A.
 
 Anyone can verify the information published by voters, trusters, stations, etc. to detect possible frauds in the system.
 For example, for each station and each referendum, the number of published public keys should match the number of published vote cards/referendum packets.
