@@ -9,3 +9,7 @@ In the second case, the private key should not go out of the citizen's computer 
 
 To ensure the private information of the citizen is handled safely, host applications and webservice should be audited and endorsed by reputable organizations, including trusters.
 Host applications and webservices should be fully open-source so that audits are easier to conduct.
+
+**Note:** the host is not strictly necessary for a citizen to perform all the possible operations.
+An expert in computer science can participate as a citizen without using any host.
+Hosts are provided only to facilitate operations for citizens who are not computer science experts.
