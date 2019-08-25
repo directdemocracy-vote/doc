@@ -1,4 +1,4 @@
-# cryptography
+# Cryptography
 
 directdemocracy heavily relies on crytography to assess the uniqueness of cards, ensure the anonymity of votes and guarantee the
 authentication of results.
