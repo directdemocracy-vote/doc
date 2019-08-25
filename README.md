@@ -45,7 +45,7 @@ The system relies on 6 types of [publication](publication.md):
 
 ## Workflow
 
-![Station workflow](https://raw.githubusercontent.com/suffragio/doc/master/vote.png "Station workflow" =397x561)
+<img src="https://raw.githubusercontent.com/suffragio/doc/master/vote.png" alt="Station workflow" width="200"/>
 
 ## Verifications
 
