@@ -1,5 +1,7 @@
 # suffragio
 
+## Overview
+
 suffragio aims at establishing world-wide [direct democracy](https://en.wikipedia.org/wiki/Direct_democracy) in order to bring peace, safety and prosperity to humananity, including saving the climate and the biodiversity.
 The principle is that people will become citizens by proposing referundums and voting regardless of any official acknowledgement.
 Vote results from a limited number of citizens could be considered as simple survey results.
@@ -18,6 +20,8 @@ suffragio is a voting system with the following properties:
 - allowing anybody to propose referendums.
 - robust to attacks.
 - aimed at gaining confidence of both technical and non-technical people.
+
+## Components
 
 It provides a voting system relying on 6 types of participant:
 
@@ -39,44 +43,12 @@ The system relies on 6 types of [publication](publication.md):
 5. [voter](voter.md) (signed by a station).
 6. [ballots](ballots.md) (signed by a station).
 
-### Referendums
+## Workflow
 
-A referendum is a text aiming at changing the law in a city, state, country or the whole world.
-It should contain the following elements:
-- The area of application (GPS coordinates of an area, usually corresponding to a city, a state, a country or the whole world).
-- Title
-- Description of the law to be applied in the area.
-- A question (usually do you agree with this proposal?)
-- A list of possible answers (usually yes/no/abstention)
-- A list of accepted trusters.
-- A deadline for the publication of results.
-It should be published on the internet, so that everyone can see it.
+![Station workflow](https://raw.githubusercontent.com/suffragio/doc/master/vote.png "Station workflow")
 
-### Stations
-
-When a citizen wants to vote, she generate a new pair of private and public key specifically for this referendum.
-Then she securely sends two signed packets to the station of her choice.
-The first packet contains her vote card, the referendum and the station.
-The second packet contains the public key and the referendum.
-The station checks that both packets are received and that the citizen is entitled to vote (area, truster endorsement).
-If not, it declines the request of the citizen and publish a message saying it refused to allow this citizen to vote to this referendum.
-This message is also sent back to the citizen.
-Otherwise, the station signs the first packet, publishes it and sent it back to the citizen.
-This way, the station announces publicly that it handles the anonymous vote of this citizen on that referendum.
-The station then removes the signature from the second packet, sign it, send it back to the citizen and store it temporary.
-
-The citizen selects an answer in the referendum, sign it with the private key and publish it.
-Once the vote period is over, the station publishes in a random order all the public key it signed and stored.
-Citizens should also publish the same information they have received from the station.
-
-Citizen will freely choose stations with a good reputation to cast their votes.
-The reputation of stations may be affected by obvious disfunctionnings or complains of citizens about their participation not being published (and hence their vote being likely usurpated) or their anonymity not being respected.
-Therefore a good reputation system should be setup to assess the reputation of stations.
-
-### Verifications
+## Verifications
 
 Anyone can verify the information published by voters, trusters, stations, etc. to detect possible frauds in the system.
 For example, for each station and each referendum, the number of published public keys should match the number of published vote cards/referendum packets.
 If numbers do not match, something has go wrong, the vote should not be considered secure and the reputation of the station should decrease.
-
-![Station workflow](https://raw.githubusercontent.com/suffragio/doc/master/vote.png "Station workflow")
