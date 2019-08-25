@@ -39,14 +39,6 @@ The system relies on 6 types of [publication](publication.md):
 5. [voter](voter.md) (signed by a station).
 6. [ballots](ballots.md) (signed by a station).
 
-### Trusters
-
-Trusters process publications and endorse publications and participants.
-Any individual or organization can become a truster.
-Trusters should establish a good reputation from others' endorsements.
-Citizen will not take part in referendums which rely on trusters they dont trust.
-So, trusters should develop the best trust algorithms to publish good endorsements and thus achieve a good reputation.
-
 ### Referendums
 
 A referendum is a text aiming at changing the law in a city, state, country or the whole world.
