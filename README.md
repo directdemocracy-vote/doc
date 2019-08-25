@@ -47,8 +47,9 @@ The system relies on 6 types of [publication](publication.md):
 
 ### 3.1 Web of Trust
 
-*Participants:* citizens, trusters, publishers, hosts.
-*Publications:* cards, endorsements.
+**Participants:** citizens, trusters, publishers, hosts.
+
+**Publications:** cards, endorsements.
 
 The web of trust aims at establising a web of trust between citizens, with the help of endorsements and trusters.
 The goal of this web of trust is to ensure that each endorsed card correspond to a unique citizen who can take part in a vote.
@@ -59,20 +60,23 @@ The goal of this web of trust is to ensure that each endorsed card correspond to
 
 ### 3.2 Referendum Setup
 
-*Participants:* authors, trusters, publishers, hosts.
-*Publications*: referendums.
+**Participants:** authors, trusters, publishers, hosts.
+
+**Publications**: referendums.
 
 ### 3.3 Vote Process
 
-*Participants:* citizens, stations, trusters, hosts.
-*Publications:* vote, voter, ballots.
+**Participants:** citizens, stations, trusters, hosts.
+
+**Publications:** vote, voter, ballots.
 
 <img src="https://raw.githubusercontent.com/suffragio/doc/master/vote.png" alt="Station workflow" width="561"/>
 
 ### 3.4 Verifications
 
-*Participants:* publishers, trusters.
-*Publications:* N/A.
+**Participants:** publishers, trusters.
+
+**Publications:** N/A.
 
 Anyone can verify the information published by voters, trusters, stations, etc. to detect possible frauds in the system.
 For example, for each station and each referendum, the number of published public keys should match the number of published vote cards/referendum packets.
