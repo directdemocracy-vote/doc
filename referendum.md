@@ -1,6 +1,6 @@
-# referendum
+# Referendum
 
-# format
+# Format
 
 ```yaml
 $schema: http://json-schema.org/draft-07/schema#
@@ -82,7 +82,7 @@ properties:
     
 ```
 
-# exemple
+# Exemple
 
 ```yaml
 key: referendum_public_key
