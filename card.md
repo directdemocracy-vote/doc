@@ -1,10 +1,10 @@
-# card
+# Card
 
-## description
+## Description
 
 A card should identify uniquely a citizen.
-Anybody can register a card become a citizen.
-The registration process simply requires that you publish a digitally signed card with your name, picture, GPS location of home, etc.
+Anybody can publish a card become a citizen.
+The registration process requires that you publish a digitally signed card with your name, picture, GPS location of home, etc.
 No review or approval is needed.
 However, you won't be able to vote if your citizen card is not endorsed by a reputed truster.
 Trusters will endorse cards they believe are correct.
@@ -15,7 +15,7 @@ For exemple, it's easier and generally sufficient to publish a single document.
 But publishing no document is perfectly fine as well.
 Also, the address is really not needed since the latitude and longitude fields are more acurate and mandatory.
 
-## format
+## Format
 
 ```yaml
 $schema: http://json-schema.org/draft-07/schema#
@@ -100,7 +100,7 @@ properties:
         type: string
 ```
 
-# example
+# Example
 
 ```yaml
 key: my_public_key
