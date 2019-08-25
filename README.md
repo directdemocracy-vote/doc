@@ -39,15 +39,6 @@ The system relies on 6 types of [publication](publication.md):
 5. [voter](voter.md) (signed by a station).
 6. [ballots](ballots.md) (signed by a station).
 
-### Endorsements
-
-As a registered citizen, you can endorse other citizens by reviewing and signing electronically their card.
-The review process is a questionnaire in which you will assess the accuracy of the information provided on the card.
-If you answer yes to every question, you should endorse the card.
-Question includes: "Do you know well the person?" or "Did you meet physically the person recently?". 
-Like cards, endorsements are published on the internet so that everyone can see them.
-Citizens and trusters can endorse any other partipant.
-
 ### Trusters
 
 Trusters process publications and endorse publications and participants.
