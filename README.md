@@ -19,12 +19,14 @@ suffragio is a voting system with the following properties:
 - robust to attacks.
 - aimed at gaining confidence of both technical and non-technical people.
 
-It provides a voting system relying on 4 types of participant:
+It provides a voting system relying on 6 types of participant:
 
 1. [citizen](citizen.md): anybody with internet access.
 2. [author](author.md): (referendum author) anybody with internet access.
 3. [truster](truster.md): anybody with computer science knowledge and computer network resources.
 4. [station](station.md): (polling station) anybody with computer science knowledge and computer network resources.
+5. [publisher](publisher.md): anybody with computer science knowledge and computer network resources.
+6. [host](host.md): with anybody computer science knowledge and computer network resources.
 
 Each participant has a pair of [private/public cryptographic keys](cryptography.md) allowing her to sign and be identified.
 
@@ -37,11 +39,6 @@ The system relies on 7 types of [publication](publication.md):
 5. [vote](vote.md) (signed by an anonymized citizen).
 6. [voter](voter.md) (signed by a station).
 7. [ballots](ballots.md) (signed by a station).
-
-and 2 types of user interfaces implemented as open-source web services or applications:
-
-1. [helper](helper.md): citizen key pair hosting, citizen card, endorsement, referendum, vote, verification.
-2. [publisher](publisher.md): display public information, including vote results, statistics, analysis, verifications, etc.
 
 ### Endorsements
 
