@@ -1,4 +1,4 @@
-# host
+# Host
 
 Hosts are applications which helps the citizens to generate and save securely their cryptographic keys.
 They also simplify the processes of plublishing a card, checking referendums, publishing endorsements, voting, checking results, etc.
