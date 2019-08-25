@@ -1,6 +1,6 @@
-# helper
+# host
 
-Helpers are applications which helps the citizens to generate and host securely their cryptographic keys.
+Hosts are applications or which helps the citizens to generate and host securely their cryptographic keys.
 Moreover, they also simplifies the processes of registering a card, checking referendums, publishing an endorsement, voting, checking results, etc.
 Helpers should aim at a good reputation so that citizens are confident using them.
 
