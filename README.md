@@ -30,15 +30,14 @@ It provides a voting system relying on 6 types of participant:
 
 Each participant has a pair of [private/public cryptographic keys](cryptography.md) allowing her to sign and be identified.
 
-The system relies on 7 types of [publication](publication.md):
+The system relies on 6 types of [publication](publication.md):
 
 1. [card](card.md) (signed by a citizen)
-2. [endorsement](endorsement.md) (signed by a citizen).
-3. [trust](trust.md) (signed by a truster).
-4. [referendum](referendum.md) (signed by an author).
-5. [vote](vote.md) (signed by an anonymized citizen).
-6. [voter](voter.md) (signed by a station).
-7. [ballots](ballots.md) (signed by a station).
+2. [endorsement](endorsement.md) (signed by a citizen or a truster).
+3. [referendum](referendum.md) (signed by an author).
+4. [vote](vote.md) (signed by an anonymized citizen).
+5. [voter](voter.md) (signed by a station).
+6. [ballots](ballots.md) (signed by a station).
 
 ### Endorsements
 
@@ -51,12 +50,11 @@ Citizens and trusters can endorse any other partipant.
 
 ### Trusters
 
-Trusters are independent algorithms that process the endorsements published on the internet to generate a reputation for each citizen. 
-Resulting reputations are signed by trusters and published on the internet so that everyone can see them.
+Trusters process publications and endorse publications and participants.
 Any individual or organization can become a truster.
-Trusters also have an informal reputation which is evaluated by citizens:
+Trusters should establish a good reputation from others' endorsements.
 Citizen will not take part in referendums which rely on trusters they dont trust.
-So, trusters should develop the best trust algorithm to establish a good reputation for themselves.
+So, trusters should develop the best trust algorithms to publish good endorsements and thus achieve a good reputation.
 
 ### Referendums
 
