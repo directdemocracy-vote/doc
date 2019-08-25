@@ -1,4 +1,4 @@
-# publication
+# Publication
 
 A publication is a JSON file that is published at one or several places on the Internet.
 It includes at least the public key of its author, the signature of its author and the publication date.
