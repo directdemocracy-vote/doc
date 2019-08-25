@@ -1,6 +1,6 @@
-# vote
+# Vote
 
-## format
+## Format
 
 ```yaml
 $schema: http://json-schema.org/draft-07/schema#
@@ -23,20 +23,30 @@ properties:
     type: string
     format: date-time
   referendum:
-    description: public key of the referendum
-    type: string
-    contentEncoding: base64
+    type: object
+    required: [key, signature]
+    properties:
+      key:
+        description: public key of the referendum
+        type: string
+        contentEncoding: base64
+      signature:
+        description: signature of the referendum
+        type: string
+        contentEncoding: base64
   answer:
     description: answer to the question of the referendum
     type: string
 ```
 
-## example
+## Example
 
 ```yaml
 key: ballot_public_key
 signature: ballot_signature
 published: 2020-01-12T20:20:02+00:00
-referendum: public_key_of_referendum
-answer: yes
+referendum:
+  key: public_key_of_the_referendum
+  signature: signature_of_the_referendum
+answer: no
 ```
