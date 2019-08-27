@@ -1,8 +1,8 @@
-# Suffragio
+# directdemocracy.vote
 
 ## 1 Overview
 
-Suffragio aims at establishing world-wide [direct democracy](https://en.wikipedia.org/wiki/Direct_democracy) in order to bring peace, safety and prosperity to humananity, including saving the climate and the biodiversity.
+directdemocracy.vote aims at establishing world-wide [direct democracy](https://en.wikipedia.org/wiki/Direct_democracy) in order to bring peace, safety and prosperity to humananity, including saving the climate and the biodiversity.
 The principle is that people will become citizens by proposing referundums and voting regardless of any official acknowledgement.
 Vote results from a limited number of citizens could be considered as simple survey results.
 They could feed debates, influence political decisions and incitate more people to become citizens.
@@ -10,7 +10,7 @@ Vote results from areas where a majority of people are citizens will become sign
 This will increase the pressure on governments to respect the democratic choices expressed by their people.
 Ultimately this bottom-up initiative will enforce direct democracy everywhere in the world.
 
-Suffragio is a voting system with the following properties:
+directdemocracy.vote is a voting system with the following properties:
 
 - open to anybody with internet access (smartphone or computer).
 - fully decentralized (nobody can control it).
@@ -70,7 +70,7 @@ The goal of this web of trust is to ensure that each endorsed card correspond to
 
 **Publications:** vote, voter, ballots.
 
-<img src="https://raw.githubusercontent.com/suffragio/doc/master/vote.png" alt="Station workflow" width="561"/>
+<img src="https://raw.githubusercontent.com/directdemocracy-vote/doc/master/vote.png" alt="Station workflow" width="561"/>
 
 ### 3.4 Verifications
 
