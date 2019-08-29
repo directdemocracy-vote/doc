@@ -11,11 +11,11 @@ type: object
 required: [key, signature, published, referendum, answer]
 properties:
   key:
-    description: public key of the ballot
+    description: public key of the vote
     type: string
     contentEncoding: base64
   signature:
-    description: signature of the ballot
+    description: signature of the vote
     type: string
     contentEncoding: base64
   published:
@@ -42,8 +42,8 @@ properties:
 ## Example
 
 ```yaml
-key: ballot_public_key
-signature: ballot_signature
+key: vote_public_key
+signature: vote_signature
 published: 2020-01-12T20:20:02+00:00
 referendum:
   key: public_key_of_the_referendum
