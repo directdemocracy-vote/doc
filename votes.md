@@ -1,5 +1,9 @@
 # Votes
 
+## Description
+
+Votes are published by [stations](station.md) once a [referendum](referendum.md) voting period is over.
+
 ## Format
 
 ```yaml
