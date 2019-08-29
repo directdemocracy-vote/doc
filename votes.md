@@ -1,12 +1,12 @@
-# Ballots
+# Votes
 
 ## Format
 
 ```yaml
 $schema: http://json-schema.org/draft-07/schema#
-$id: https://directdemocracy.net/json-schema/1.0/ballots.schema.json
-title: ballots
-description: list of ballots used for a referedum by a station
+$id: https://directdemocracy.vote/json-schema/1.0.0/ballots.schema.json
+title: votes
+description: list of votes used for a referedum by a station
 type: object
 required: [key, signature, published, referendum, citizen]
 properties:
@@ -34,11 +34,11 @@ properties:
         description: signature of the referendum
         type: string
         contentEncoding: base64
-  ballots:
-    description: list of ballots
+  votes:
+    description: list of votes
     type: array
     items:
-      description: public key of the ballot
+      description: public key of the vote
       type: string
       contentEncoding: base64
 ```
@@ -52,8 +52,10 @@ published: 2020-02-21T08:00:00+00:00
 referendum:
   key: referendum_public_key
   signature: referendum_signature
-ballots:
-- ballot16_public_key
-- ballot29_public_key
+votes:
+- key: vote16_public_key
+  signature: vote16_signature
+- key: vote29_public_key
+  signature: vote29_signature
 - etc.
 ```
