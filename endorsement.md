@@ -22,7 +22,7 @@ Like cards, endorsements are published on the Internet so that everyone can see 
 
 ```yaml
 $schema: http://json-schema.org/draft-07/schema#
-$id: https://directdemocracy.net/json-schema/1.0/endorsement.schema.json
+$id: https://directdemocracy.vote/json-schema/1.0.0/endorsement.schema.json
 title: endorsement
 description: claim that a participant (endorser) acknowledges another participant (endorsed)
 type: object
