@@ -41,7 +41,7 @@ The system relies on 6 types of [publication](publication.md):
 3. [referendum](referendum.md) (signed by an author).
 4. [vote](vote.md) (signed by an anonymized citizen).
 5. [voter](voter.md) (signed by a station).
-6. [ballots](ballots.md) (signed by a station).
+6. [votes](votes.md) (signed by a station).
 
 ## 3 Workflows
 
@@ -68,7 +68,7 @@ The goal of this web of trust is to ensure that each endorsed card correspond to
 
 **Participants:** citizens, stations, trusters, hosts.
 
-**Publications:** vote, voter, ballots.
+**Publications:** vote, voter, votes.
 
 <img src="https://raw.githubusercontent.com/directdemocracy-vote/doc/master/vote.png" alt="Station workflow" width="561"/>
 
