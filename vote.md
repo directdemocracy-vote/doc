@@ -4,7 +4,7 @@
 
 ```yaml
 $schema: http://json-schema.org/draft-07/schema#
-$id: https://directdemocracy.net/json-schema/1.0/vote.schema.json
+$id: https://directdemocracy.vote/json-schema/1.0.0/vote.schema.json
 title: vote
 description: vote casted by a citizen for a referendum
 type: object
