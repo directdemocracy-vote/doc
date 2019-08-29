@@ -4,7 +4,7 @@
 
 ```yaml
 $schema: http://json-schema.org/draft-07/schema#
-$id: https://directdemocracy.vote/json-schema/1.0.0/ballots.schema.json
+$id: https://directdemocracy.vote/json-schema/1.0.0/votes.schema.json
 title: votes
 description: list of votes used for a referedum by a station
 type: object
@@ -19,7 +19,7 @@ properties:
     type: string
     contentEncoding: base64
   published:
-    description: date at which the ballots were published
+    description: date at which the votes were published
     type: string
     format: date-time
   referendum:
@@ -38,9 +38,18 @@ properties:
     description: list of votes
     type: array
     items:
-      description: public key of the vote
-      type: string
-      contentEncoding: base64
+      description: vote
+      type: object
+      required: [key, signature]
+      properties:
+        key:
+          description: public key of the vote
+          type: string
+          contentEncoding: base64
+        signature:
+          description: signature of the vote
+          type: string
+          contentEncoding: base64
 ```
 
 ## Example
