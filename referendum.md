@@ -9,7 +9,7 @@ It should be published on the internet, so that everyone can see it.
 
 ```yaml
 $schema: http://json-schema.org/draft-07/schema#
-$id: https://directdemocracy.net/json-schema/1.0/referendum.schema.json
+$id: https://directdemocracy.vote/json-schema/1.0.0/referendum.schema.json
 title: referendum
 description: referendum proposing a new law or a change in some existing law
 type: object
@@ -65,26 +65,18 @@ properties:
             items:
               type: number
   trusters:
-    description: trusters that should be used to process this referendum
+    description: public keys of trusters that should be used to process this referendum
     type: array
     items:
-      type: object
-      properties:
-        key:
-          description: public key of the truster
-          type: string
-          contentEncoding: base64
-        trust:
-          description: minimum trust from this truster necessary to vote for this referendum
-          type: number
-          minimum: 0
+      description: public key of the truster
+      type: string
+      contentEncoding: base64
   websites:
     description: websites providing more information about the referendum
     type: array
     items:
       type: string
       format: uri
-    
 ```
 
 # Exemple
