@@ -19,7 +19,7 @@ Also, the address is really not needed since the latitude and longitude fields a
 
 ```yaml
 $schema: http://json-schema.org/draft-07/schema#
-$id: https://directdemocracy.net/json-schema/1.0/card.schema.json
+$id: https://directdemocracy.vote/json-schema/1.0.0/card.schema.json
 title: card
 description: information allowing to identify uniquely a citizen
 type: object
