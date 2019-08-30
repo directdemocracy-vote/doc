@@ -10,7 +10,7 @@ The `endorsed.signature` field is necessary only when endorsing a card or a refe
 It should not be set when endorsing a truster or a station.
 Trusters publish endorsements based on their expertise and deep analysis of many publications, including endorsements.
 Referendums and stations should not publish any endorsement.
-Citizens and trusters can endorse any other partipant.
+Citizens and trusters can endorse any other participant.
 
 As a citizen, you should mainly endorse other citizens by reviewing and signing electronically their card.
 The review process is a questionnaire in which you will assess the accuracy of the information provided on the card.
@@ -22,12 +22,14 @@ Like cards, endorsements are published on the Internet so that everyone can see 
 
 ```yaml
 $schema: http://json-schema.org/draft-07/schema#
-$id: https://directdemocracy.vote/json-schema/1.0.0/endorsement.schema.json
+$id: https://directdemocracy.vote/json-schema/0.0.1/endorsement.schema.json
 title: endorsement
 description: claim that a participant (endorser) acknowledges another participant (endorsed)
 type: object
-required: [key, signature, published, endorsedKey]
+required: [schema, key, signature, published, endorsedKey]
 properties:
+  schema:
+    const: https://directdemocracy.vote/json-schema/0.0.1/endorsement.schema.json
   key:
     description: public key of the endorser
     type: string
@@ -59,6 +61,7 @@ properties:
 ## Example
 
 ```yaml
+schema: https://directdemocracy.vote/json-schema/0.0.1/endorsement.schema.json
 key: my_public_key
 signature: my_signature
 published: 2019-08-21T21:12:00+00.00

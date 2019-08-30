@@ -9,12 +9,14 @@ It should be published on the internet, so that everyone can see it.
 
 ```yaml
 $schema: http://json-schema.org/draft-07/schema#
-$id: https://directdemocracy.vote/json-schema/1.0.0/referendum.schema.json
+$id: https://directdemocracy.vote/json-schema/0.0.1/referendum.schema.json
 title: referendum
 description: referendum proposing a new law or a change in some existing law
 type: object
-required: [key, signature, published, title, description, question, answers, deadline, areas, trusters]
+required: [schema, key, signature, published, title, description, question, answers, deadline, areas, trusters]
 properties:
+  schema:
+    const: https://directdemocracy.vote/json-schema/0.0.1/referendum.schema.json
   key:
     description: public key of the author of the referendum
     type: string
@@ -82,6 +84,7 @@ properties:
 # Exemple
 
 ```yaml
+schema: https://directdemocracy.vote/json-schema/0.0.1/referendum.schema.json
 key: referendum_public_key
 signature: referendum_signature
 published: 2019-09-12T12:33:21+00:00
@@ -109,10 +112,8 @@ areas:
  - type: country
    name: Switzerland
 trusters:
-- key: truster1_public_key
-  trust: 0.9
-- key: truster2_public_key
-  trust: 0.7
+- truster1_public_key
+- truster2_public_key
 websites:
 - https://www.myreferendum.com
 - https://www.my-referendum.net

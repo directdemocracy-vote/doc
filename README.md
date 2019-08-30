@@ -2,10 +2,10 @@
 
 ## 1 Overview
 
-directdemocracy (short for directdemocracy.vote) aims at establishing world-wide [direct democracy](https://en.wikipedia.org/wiki/Direct_democracy) in order to bring peace, safety and prosperity to humananity, including saving the climate and the biodiversity.
-The principle is that people will become citizens by proposing referundums and voting regardless of any official acknowledgement.
+directdemocracy (short for directdemocracy.vote) aims at establishing world-wide [direct democracy](https://en.wikipedia.org/wiki/Direct_democracy) in order to bring peace, safety and prosperity to humanity, including saving the climate and the biodiversity.
+The principle is that people will become citizens by proposing referendums and voting regardless of any official acknowledgement.
 Vote results from a limited number of citizens could be considered as simple survey results.
-They could feed debates, influence political decisions and incitate more people to become citizens.
+They could feed debates, influence political decisions and foster more people to become citizens.
 Vote results from areas where a majority of people are citizens will become significant from a democratic point of view.
 This will increase the pressure on governments to respect the democratic choices expressed by their people.
 Ultimately this bottom-up initiative will enforce direct democracy everywhere in the world.
@@ -14,7 +14,7 @@ directdemocracy is a voting system with the following properties:
 
 - open to anybody with internet access (smartphone or computer).
 - fully decentralized (nobody can control it).
-- verifyable (check that my vote was taken into account, check that others didn't cheat).
+- verifiable (check that my vote was taken into account, check that others didn't cheat).
 - relying on open-source specifications and open-source software.
 - providing easy-to-use user interfaces.
 - allowing anybody to propose referendums.
@@ -51,11 +51,11 @@ The system relies on 6 types of [publication](publication.md):
 
 **Publications:** cards, endorsements.
 
-The web of trust aims at establising a web of trust between citizens, with the help of endorsements and trusters.
+The web of trust aims at establishing a web of trust between citizens, with the help of endorsements and trusters.
 The goal of this web of trust is to ensure that each endorsed card correspond to a unique citizen who can take part in a vote.
 
 1. Each citizen should publish a card with their personal information.
-2. Each citizen should endorse several other citizens they personnaly know to create a web of endorsements.
+2. Each citizen should endorse several other citizens they personally know to create a web of endorsements.
 3. Trusters should use the resulting web of endorsements to endorse all the cards corresponding to a unique citizen.
 
 ### 3.2 Referendum Setup

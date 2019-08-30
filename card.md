@@ -6,25 +6,27 @@ A card should identify uniquely a citizen.
 Anybody can publish a card become a citizen.
 The registration process requires that you publish a digitally signed card with your name, picture, GPS location of home, etc.
 No review or approval is needed.
-However, you won't be able to vote if your citizen card is not endorsed by a reputed truster.
-Trusters will endorse cards they believe are correct.
-Citizens should help trusters by endorsing the cards of other citizens they personnaly know.
+However, you won't be able to vote if your citizen card is not endorsed by a reputed [truster](truster.md).
+[Trusters](truster.md) will endorse cards they believe are correct.
+Citizens should help [trusters](truster.md) by endorsing the cards of other citizens they personally know.
 Citizens should not publish cards with too much information, e.g., documents, address, sex, birthday, etc.
 Rather, they should provide only information they agree to disclose publicly and that can be easily checked by others.
-For exemple, it's easier and generally sufficient to publish a single document.
+For example, it's easier and generally sufficient to publish a single document.
 But publishing no document is perfectly fine as well.
-Also, the address is really not needed since the latitude and longitude fields are more acurate and mandatory.
+Also, the address is really not needed since the latitude and longitude fields are more accurate and mandatory.
 
 ## Format
 
 ```yaml
 $schema: http://json-schema.org/draft-07/schema#
-$id: https://directdemocracy.vote/json-schema/1.0.0/card.schema.json
+$id: https://directdemocracy.vote/json-schema/0.0.1/card.schema.json
 title: card
 description: information allowing to identify uniquely a citizen
 type: object
-required: [key, signature, edited, familyName, givenName, picture, latitude, longitude]
+required: [schema, key, signature, edited, familyName, givenName, picture, latitude, longitude]
 properties:
+  schema:
+    const: https://directdemocracy.vote/json-schema/0.0.1/card.schema.json
   key:
     description: public key of the citizen
     type: string
@@ -103,6 +105,7 @@ properties:
 # Example
 
 ```yaml
+schema: https://directdemocracy.vote/json-schema/0.0.1/card.schema.json
 key: my_public_key
 signature: my_signature
 published: 2019-08-02T20:20:39+00:00

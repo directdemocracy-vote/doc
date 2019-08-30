@@ -8,12 +8,14 @@ Votes are published by [stations](station.md) once a [referendum](referendum.md)
 
 ```yaml
 $schema: http://json-schema.org/draft-07/schema#
-$id: https://directdemocracy.vote/json-schema/1.0.0/votes.schema.json
+$id: https://directdemocracy.vote/json-schema/0.0.1/votes.schema.json
 title: votes
 description: list of votes used for a referedum by a station
 type: object
-required: [key, signature, published, referendum, citizen]
+required: [schema, key, signature, published, referendum, citizen]
 properties:
+  schema:
+    const: https://directdemocracy.vote/json-schema/0.0.1/votes.schema.json
   key:
     description: public key of the station
     type: string
@@ -59,6 +61,7 @@ properties:
 ## Example
 
 ```yaml
+schema: https://directdemocracy.vote/json-schema/0.0.1/votes.schema.json
 key: station_public_key
 signature: station_signature
 published: 2020-02-21T08:00:00+00:00

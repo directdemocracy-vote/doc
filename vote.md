@@ -4,12 +4,14 @@
 
 ```yaml
 $schema: http://json-schema.org/draft-07/schema#
-$id: https://directdemocracy.vote/json-schema/1.0.0/vote.schema.json
+$id: https://directdemocracy.vote/json-schema/0.0.1/vote.schema.json
 title: vote
 description: vote casted by a citizen for a referendum
 type: object
-required: [key, signature, published, referendum, answer]
+required: [schema, key, signature, published, referendum, answer]
 properties:
+  schema:
+    const: https://directdemocracy.vote/json-schema/0.0.1/vote.schema.json
   key:
     description: public key of the vote
     type: string
@@ -42,6 +44,7 @@ properties:
 ## Example
 
 ```yaml
+schema: https://directdemocracy.vote/json-schema/0.0.1/vote.schema.json
 key: vote_public_key
 signature: vote_signature
 published: 2020-01-12T20:20:02+00:00

@@ -16,5 +16,5 @@ Once the vote period is over, the station publishes in a random order all the pu
 Citizens should also publish the same information they have received from the station.
 
 Citizen will freely choose stations with a good reputation to cast their votes.
-The reputation of stations may be affected by obvious disfunctionnings or complains of citizens about their participation not being published (and hence their vote being likely usurpated) or their anonymity not being respected.
+The reputation of stations may be affected by obvious disfunctions or complains of citizens about their participation not being published (and hence their vote being likely usurped) or their anonymity not being respected.
 Therefore a good reputation system should be setup to assess the reputation of stations.
