@@ -2,7 +2,7 @@
 
 ## Description
 
-A referendum is a [publication](publication.md) written by an [author](author.md) aiming at changing the law in a city, state, country or the whole world.
+A referendum is a [publication](publication.md) written by a citizen aiming at changing the law in a city, state, country or the whole world.
 It should be published on the internet, so that everyone can see it.
 
 # Format
