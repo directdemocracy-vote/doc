@@ -23,14 +23,12 @@ directdemocracy is a voting system with the following properties:
 
 ## 2 Components
 
-It provides a voting system relying on 6 types of participant:
+It provides a voting system relying on 4 types of participant:
 
 1. [citizen](citizen.md): anybody with internet access.
-2. [author](author.md): (referendum author) anybody with internet access.
-3. [truster](truster.md): anybody with computer science knowledge and computer network resources.
-4. [station](station.md): (polling station) anybody with computer science knowledge and computer network resources.
-5. [publisher](publisher.md): anybody with computer science knowledge and computer network resources.
-6. [host](host.md): with anybody computer science knowledge and computer network resources.
+2. [truster](truster.md): anybody with computer science knowledge and computer network resources.
+3. [station](station.md): (polling station) anybody with computer science knowledge and computer network resources.
+4. [publisher](publisher.md): anybody with computer science knowledge and computer network resources.
 
 Each participant has a pair of [private/public cryptographic keys](cryptography.md) allowing her to sign and be identified.
 
@@ -38,7 +36,7 @@ The system relies on 6 types of [publication](publication.md):
 
 1. [card](card.md) (signed by a citizen)
 2. [endorsement](endorsement.md) (signed by a citizen or a truster).
-3. [referendum](referendum.md) (signed by an author).
+3. [referendum](referendum.md) (signed by a citizen).
 4. [vote](vote.md) (signed by an anonymized citizen).
 5. [voter](voter.md) (signed by a station).
 6. [votes](votes.md) (signed by a station).
@@ -47,7 +45,7 @@ The system relies on 6 types of [publication](publication.md):
 
 ### 3.1 Web of Trust
 
-**Participants:** citizens, trusters, publishers, hosts.
+**Participants:** citizens, trusters, publishers.
 
 **Publications:** cards, endorsements.
 
@@ -60,13 +58,13 @@ The goal of this web of trust is to ensure that each endorsed card correspond to
 
 ### 3.2 Referendum Setup
 
-**Participants:** authors, trusters, publishers, hosts.
+**Participants:** citizens, trusters, publishers.
 
 **Publications**: referendums.
 
 ### 3.3 Vote Process
 
-**Participants:** citizens, stations, trusters, hosts.
+**Participants:** citizens, stations, trusters.
 
 **Publications:** vote, voter, votes.
 
