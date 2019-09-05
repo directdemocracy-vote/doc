@@ -46,8 +46,8 @@ properties:
   familyName:
     description: last name of the citizen
     type: string
-  givenName:
-    description: first name of the citizen
+  givenNames:
+    description: first name and possibly middle name of the citizen
     type: string
   picture:
     description: photo of the citizen
@@ -115,7 +115,7 @@ signature: my_signature
 published: 2019-08-02T20:20:39+00:00
 expires: 2029-08-02T20:20:39+00:00
 familyName: Smith
-givenName: John
+givenNames: John
 picture: base64_encoded_jpeg_picture
 latitude: 40.7247239
 longitude: -73.9934037
