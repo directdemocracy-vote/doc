@@ -26,7 +26,7 @@ $id: https://directdemocracy.vote/json-schema/0.0.1/endorsement.schema.json
 title: endorsement
 description: claim that a participant (endorser) acknowledges another participant (endorsed)
 type: object
-required: [schema, key, signature, published, endorsedKey]
+required: [schema, key, signature, published, expires, endorsedKey]
 properties:
   schema:
     const: https://directdemocracy.vote/json-schema/0.0.1/endorsement.schema.json
@@ -40,6 +40,10 @@ properties:
     contentEncoding: base64
   published:
     description: date of publication of the endorsement
+    type: string
+    format: date-time
+  expires:
+    description: date of expiration of the endorsement
     type: string
     format: date-time
   endorsed:
@@ -56,6 +60,12 @@ properties:
   revoke:
     description: if this field is set, the endorsement is revoked and the string should contain a justification for the revocation
     type: string
+  message:
+    description: message encrypted with the public key of the endorsed participant
+    type: string
+  comment:
+    description: free comment
+    type: string
 ```
 
 ## Example
@@ -65,6 +75,7 @@ schema: https://directdemocracy.vote/json-schema/0.0.1/endorsement.schema.json
 key: my_public_key
 signature: my_signature
 published: 2019-08-21T21:12:00+00.00
+expires: 2022-08-21T21:12:00+00.00
 endorsed:
   key: public_key_of_the_card
   signature: signature_of_the_card

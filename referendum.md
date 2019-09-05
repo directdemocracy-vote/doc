@@ -13,7 +13,7 @@ $id: https://directdemocracy.vote/json-schema/0.0.1/referendum.schema.json
 title: referendum
 description: referendum proposing a new law or a change in some existing law
 type: object
-required: [schema, key, signature, published, title, description, question, answers, deadline, areas, trusters]
+required: [schema, key, signature, published, expires, title, description, question, answers, deadline, areas, trusters]
 properties:
   schema:
     const: https://directdemocracy.vote/json-schema/0.0.1/referendum.schema.json
@@ -27,6 +27,10 @@ properties:
     contentEncoding: base64
   published:
     description: date of the publication of the referendum
+    type: string
+    format: date-time
+  expires:
+    description: date of the expiration of the referendum
     type: string
     format: date-time
   title:
@@ -88,6 +92,7 @@ schema: https://directdemocracy.vote/json-schema/0.0.1/referendum.schema.json
 key: referendum_public_key
 signature: referendum_signature
 published: 2019-09-12T12:33:21+00:00
+expires: 2029-09-12T12:33:21+00:00
 title: my referendum
 description: my description
 question: do you agree?

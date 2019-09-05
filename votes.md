@@ -12,7 +12,7 @@ $id: https://directdemocracy.vote/json-schema/0.0.1/votes.schema.json
 title: votes
 description: list of votes used for a referedum by a station
 type: object
-required: [schema, key, signature, published, referendum, citizen]
+required: [schema, key, signature, published, expires, referendum, citizen]
 properties:
   schema:
     const: https://directdemocracy.vote/json-schema/0.0.1/votes.schema.json
@@ -26,6 +26,10 @@ properties:
     contentEncoding: base64
   published:
     description: date at which the votes were published
+    type: string
+    format: date-time
+  expires:
+    description: date at which the votes expire
     type: string
     format: date-time
   referendum:
@@ -65,6 +69,7 @@ schema: https://directdemocracy.vote/json-schema/0.0.1/votes.schema.json
 key: station_public_key
 signature: station_signature
 published: 2020-02-21T08:00:00+00:00
+published: 2030-02-21T08:00:00+00:00
 referendum:
   key: referendum_public_key
   signature: referendum_signature

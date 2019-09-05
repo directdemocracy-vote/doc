@@ -8,7 +8,7 @@ $id: https://directdemocracy.vote/json-schema/0.0.1/voter.schema.json
 title: voter
 description: citizen who voted in a referendum
 type: object
-required: [schema, key, signature, published, referendum, citizen]
+required: [schema, key, signature, published, expires, referendum, citizen]
 properties:
   schema:
     const: https://directdemocracy.vote/json-schema/0.0.1/voter.schema.json
@@ -22,6 +22,10 @@ properties:
     contentEncoding: base64
   published:
     description: date at which the voter was published
+    type: string
+    format: date-time
+  expires:
+    description: date at which the voter expires
     type: string
     format: date-time
   referendum:
@@ -57,6 +61,7 @@ schema: https://directdemocracy.vote/json-schema/0.0.1/voter.schema.json
 key: station_public_key
 signature: station_signature
 published: 2019-11-23T21:21:33+00:00
+expires: 2029-11-23T21:21:33+00:00
 referedum:
   key: referendum_public_key
   signagure: referendum_signature

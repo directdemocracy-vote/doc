@@ -23,7 +23,7 @@ $id: https://directdemocracy.vote/json-schema/0.0.1/card.schema.json
 title: card
 description: information allowing to identify uniquely a citizen
 type: object
-required: [schema, key, signature, edited, familyName, givenName, picture, latitude, longitude]
+required: [schema, key, signature, published, expires, familyName, givenName, picture, latitude, longitude]
 properties:
   schema:
     const: https://directdemocracy.vote/json-schema/0.0.1/card.schema.json
@@ -37,6 +37,10 @@ properties:
     contentEncoding: base64
   published:
     description: date of publication of the citizen card
+    type: string
+    format: date-time
+  expires:
+    description: expiration date of the citizen card
     type: string
     format: date-time
   familyName:
@@ -109,6 +113,7 @@ schema: https://directdemocracy.vote/json-schema/0.0.1/card.schema.json
 key: my_public_key
 signature: my_signature
 published: 2019-08-02T20:20:39+00:00
+expires: 2029-08-02T20:20:39+00:00
 familyName: Smith
 givenName: John
 picture: base64_encoded_jpeg_picture
