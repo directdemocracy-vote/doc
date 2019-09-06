@@ -30,11 +30,9 @@ properties:
   key:
     description: public key of the citizen
     type: string
-    contentEncoding: base64
   signature:
     description: signature of the card by the citizen
     type: string
-    contentEncoding: base64
   published:
     description: date of publication of the citizen card
     type: string
@@ -52,7 +50,6 @@ properties:
   picture:
     description: photo of the citizen
     type: string
-    contentEncoding: base64
     contentMediaType: image/jpeg
   latitude:
     description: latitude of the home of the citizen expressed in 1/1000000 degrees

@@ -15,11 +15,9 @@ properties:
   key:
     description: public key of the station
     type: string
-    contentEncoding: base64
   signature:
     description: signature of the station
     type: string
-    contentEncoding: base64
   published:
     description: date at which the voter was published
     type: string
@@ -35,11 +33,9 @@ properties:
       key:
         description: public key of the referendum
         type: string
-        contentEncoding: base64
       signature:
         description: signature the referendum
         type: string
-        contentEncoding: base64
   citizen:
     type: object
     required: [key, signature]
@@ -47,11 +43,9 @@ properties:
       key:
         description: public key of the citizen who voted at this referendum
         type: string
-        contentEncoding: base64
       signature:
         description: signature of the citizen who voted at this referendum
         type: string
-        contentEncoding: base64
 ```
 
 ## Example

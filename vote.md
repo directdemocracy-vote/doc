@@ -15,11 +15,9 @@ properties:
   key:
     description: public key of the vote
     type: string
-    contentEncoding: base64
   signature:
     description: signature of the vote
     type: string
-    contentEncoding: base64
   published:
     description: date at which the vote was published
     type: string
@@ -35,11 +33,9 @@ properties:
       key:
         description: public key of the referendum
         type: string
-        contentEncoding: base64
       signature:
         description: signature of the referendum
         type: string
-        contentEncoding: base64
   answer:
     description: answer to the question of the referendum
     type: string

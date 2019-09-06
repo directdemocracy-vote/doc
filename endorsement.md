@@ -33,11 +33,9 @@ properties:
   key:
     description: public key of the endorser
     type: string
-    contentEncoding: base64
   signature:
     description: signature of the endorser
     type: string
-    contentEncoding: base64
   published:
     description: date of publication of the endorsement
     type: string
@@ -52,11 +50,9 @@ properties:
       key:
         description: public key of the endorsed participant
         type: string
-        contentEncoding: base64
       signature:
         description: signature of a card, endorsement or referendum
         type: string
-        contentEncoding: base64
   revoke:
     description: if this field is set, the endorsement is revoked and the string should contain a justification for the revocation
     type: string

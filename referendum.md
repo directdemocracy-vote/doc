@@ -20,11 +20,9 @@ properties:
   key:
     description: public key of the author of the referendum
     type: string
-    contentEncoding: base64
   signature:
     description: signature of the author of the referendum
     type: string
-    contentEncoding: base64
   published:
     description: date of the publication of the referendum
     type: string
@@ -76,7 +74,6 @@ properties:
     items:
       description: public key of the truster
       type: string
-      contentEncoding: base64
   websites:
     description: websites providing more information about the referendum
     type: array

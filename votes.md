@@ -19,11 +19,9 @@ properties:
   key:
     description: public key of the station
     type: string
-    contentEncoding: base64
   signature:
     description: signature of the station
     type: string
-    contentEncoding: base64
   published:
     description: date at which the votes were published
     type: string
@@ -39,11 +37,9 @@ properties:
       key:
         description: public key of the referendum
         type: string
-        contentEncoding: base64
       signature:
         description: signature of the referendum
         type: string
-        contentEncoding: base64
   votes:
     description: list of votes
     type: array
@@ -55,11 +51,9 @@ properties:
         key:
           description: public key of the vote
           type: string
-          contentEncoding: base64
         signature:
           description: signature of the vote
           type: string
-          contentEncoding: base64
 ```
 
 ## Example
