@@ -55,15 +55,15 @@ properties:
     contentEncoding: base64
     contentMediaType: image/jpeg
   latitude:
-    description: latitude of the home of the citizen expressed in degrees
-    type: number
-    minimum: -90
-    maximum: 90
+    description: latitude of the home of the citizen expressed in 1/1000000 degrees
+    type: integer
+    minimum: -90000000
+    maximum: 90000000
   longitude:
-    description: longitude of the home of the citizen expressed in degrees
-    type: number
-    minimum: -180
-    maximum: 180
+    description: longitude of the home of the citizen expressed in 1/1000000 degrees
+    type: integer
+    minimum: -180000000
+    maximum: 180000000
   documents:
     description: documents to be checked by citizen endorsers
     type: array
@@ -117,8 +117,8 @@ expires: 2029-08-02T20:20:39+00:00
 familyName: Smith
 givenNames: John
 picture: base64_encoded_jpeg_picture
-latitude: 40.7247239
-longitude: -73.9934037
+latitude: 40724723
+longitude: -73993403
 document:
 - type: passport
   issuer: USA
