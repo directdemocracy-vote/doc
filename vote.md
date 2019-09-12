@@ -2,44 +2,7 @@
 
 ## Format
 
-```yaml
-$schema: http://json-schema.org/draft-07/schema#
-$id: https://directdemocracy.vote/json-schema/0.0.1/vote.schema.json
-title: vote
-description: vote casted by a citizen for a referendum
-type: object
-required: [schema, key, signature, published, expires, referendum, answer]
-properties:
-  schema:
-    const: https://directdemocracy.vote/json-schema/0.0.1/vote.schema.json
-  key:
-    description: public key of the vote
-    type: string
-  signature:
-    description: signature of the vote
-    type: string
-  published:
-    description: date at which the vote was published
-    type: string
-    format: date-time
-  expires:
-    description: date at which the vote expires
-    type: string
-    format: date-time
-  referendum:
-    type: object
-    required: [key, signature]
-    properties:
-      key:
-        description: public key of the referendum
-        type: string
-      signature:
-        description: signature of the referendum
-        type: string
-  answer:
-    description: answer to the question of the referendum
-    type: string
-```
+https://directdemocracy.vote/json-schema/0.0.1/vote.schema.json
 
 ## Example
 
