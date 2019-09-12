@@ -7,82 +7,9 @@ It should be published on the internet, so that everyone can see it.
 
 # Format
 
-```yaml
-$schema: http://json-schema.org/draft-07/schema#
-$id: https://directdemocracy.vote/json-schema/0.0.1/referendum.schema.json
-title: referendum
-description: referendum proposing a new law or a change in some existing law
-type: object
-required: [schema, key, signature, published, expires, title, description, question, answers, deadline, areas, trusters]
-properties:
-  schema:
-    const: https://directdemocracy.vote/json-schema/0.0.1/referendum.schema.json
-  key:
-    description: public key of the author of the referendum
-    type: string
-  signature:
-    description: signature of the author of the referendum
-    type: string
-  published:
-    description: date of the publication of the referendum
-    type: string
-    format: date-time
-  expires:
-    description: date of the expiration of the referendum
-    type: string
-    format: date-time
-  title:
-    description: title of the referendum
-    type: string
-  description:
-    description: detailed description of the referendum (markdown allowed)
-    type: string
-  question:
-    description: question to which the citizen should answer
-    type: string
-  answers:
-    description: possible answers to the above question, typically, yes, no, abstain
-    type: array
-    items:
-      type: string
-  deadline:
-    type: string
-    format: date-time
-  areas:
-    description: areas in which the citizen should live to vote for this referendum
-    type: array
-    items:
-      type: object
-      description: area
-      properties:
-        type:
-          description: type of area (city, department, state, county, country, etc.)
-          type: string
-        name:
-          description: name of the area
-          type: string
-        polygons:
-          description: polygons of GPS coordinates points defining the area
-          type: array
-          items:
-            type: array
-            items:
-              type: number
-  trusters:
-    description: public keys of trusters that should be used to process this referendum
-    type: array
-    items:
-      description: public key of the truster
-      type: string
-  websites:
-    description: websites providing more information about the referendum
-    type: array
-    items:
-      type: string
-      format: uri
-```
+https://directdemocracy.vote/json-schema/0.0.1/referendum.schema.json
 
-# Exemple
+## Example
 
 ```yaml
 schema: https://directdemocracy.vote/json-schema/0.0.1/referendum.schema.json
