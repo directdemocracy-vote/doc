@@ -6,55 +6,7 @@ Votes are published by [stations](station.md) once a [referendum](referendum.md)
 
 ## Format
 
-```yaml
-$schema: http://json-schema.org/draft-07/schema#
-$id: https://directdemocracy.vote/json-schema/0.0.1/votes.schema.json
-title: votes
-description: list of votes used for a referedum by a station
-type: object
-required: [schema, key, signature, published, expires, referendum, citizen]
-properties:
-  schema:
-    const: https://directdemocracy.vote/json-schema/0.0.1/votes.schema.json
-  key:
-    description: public key of the station
-    type: string
-  signature:
-    description: signature of the station
-    type: string
-  published:
-    description: date at which the votes were published
-    type: string
-    format: date-time
-  expires:
-    description: date at which the votes expire
-    type: string
-    format: date-time
-  referendum:
-    type: object
-    required: [key, signature]
-    properties:
-      key:
-        description: public key of the referendum
-        type: string
-      signature:
-        description: signature of the referendum
-        type: string
-  votes:
-    description: list of votes
-    type: array
-    items:
-      description: vote
-      type: object
-      required: [key, signature]
-      properties:
-        key:
-          description: public key of the vote
-          type: string
-        signature:
-          description: signature of the vote
-          type: string
-```
+https://directdemocracy.vote/json-schema/0.0.1/votes.schema.json
 
 ## Example
 
