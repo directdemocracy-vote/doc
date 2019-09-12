@@ -17,6 +17,8 @@ Also, the address is really not needed since the latitude and longitude fields a
 
 ## Format
 
+https://directdemocracy.vote/json-schema/0.0.1/card.schema.json
+
 ```yaml
 $schema: http://json-schema.org/draft-07/schema#
 $id: https://directdemocracy.vote/json-schema/0.0.1/card.schema.json
