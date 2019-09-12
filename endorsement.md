@@ -20,49 +20,7 @@ Like cards, endorsements are published on the Internet so that everyone can see 
 
 ## Format
 
-```yaml
-$schema: http://json-schema.org/draft-07/schema#
-$id: https://directdemocracy.vote/json-schema/0.0.1/endorsement.schema.json
-title: endorsement
-description: claim that a participant (endorser) acknowledges another participant (endorsed)
-type: object
-required: [schema, key, signature, published, expires, endorsedKey]
-properties:
-  schema:
-    const: https://directdemocracy.vote/json-schema/0.0.1/endorsement.schema.json
-  key:
-    description: public key of the endorser
-    type: string
-  signature:
-    description: signature of the endorser
-    type: string
-  published:
-    description: date of publication of the endorsement
-    type: string
-    format: date-time
-  expires:
-    description: date of expiration of the endorsement
-    type: string
-    format: date-time
-  endorsed:
-    required: [key]
-    properties:
-      key:
-        description: public key of the endorsed participant
-        type: string
-      signature:
-        description: signature of a card, endorsement or referendum
-        type: string
-  revoke:
-    description: if this field is set, the endorsement is revoked and the string should contain a justification for the revocation
-    type: string
-  message:
-    description: message encrypted with the public key of the endorsed participant
-    type: string
-  comment:
-    description: free comment
-    type: string
-```
+https://directdemocracy.vote/json-schema/0.0.1/endorsement.schema.json
 
 ## Example
 
