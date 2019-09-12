@@ -19,7 +19,7 @@ Also, the address is really not needed since the latitude and longitude fields a
 
 https://directdemocracy.vote/json-schema/0.0.1/card.schema.json
 
-# Example
+## Example
 
 ```yaml
 schema: https://directdemocracy.vote/json-schema/0.0.1/card.schema.json
