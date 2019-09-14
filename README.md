@@ -32,14 +32,15 @@ It provides a voting system relying on 4 types of participant:
 
 Each participant has a pair of [private/public cryptographic keys](cryptography.md) allowing her to sign and be identified.
 
-The system relies on 6 types of [publication](publication.md):
+The system relies on 7 types of [publication](publication.md):
 
 1. [card](card.md) (signed by a citizen)
 2. [endorsement](endorsement.md) (signed by a citizen or a truster).
-3. [referendum](referendum.md) (signed by a citizen).
-4. [vote](vote.md) (signed by an anonymized citizen).
-5. [voter](voter.md) (signed by a station).
-6. [votes](votes.md) (signed by a station).
+3. [revocation](revocation.md) (signed by a citizen or a truster).
+4. [referendum](referendum.md) (signed by a citizen).
+5. [vote](vote.md) (signed by an anonymized citizen).
+6. [voter](voter.md) (signed by a station).
+7. [votes](votes.md) (signed by a station).
 
 ## 3 Workflows
 
