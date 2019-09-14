@@ -34,7 +34,9 @@ Each participant has a pair of [private/public cryptographic keys](cryptography.
 
 The system relies on 7 types of [publication](publication.md):
 
-1. [card](card.md) (signed by a citizen)
+1. [citizen](citizen.md) card (signed by a citizen)
+2. [truster](truster.md) card (signed by a truster)
+...
 2. [endorsement](endorsement.md) (signed by a citizen or a truster).
 3. [revocation](revocation.md) (signed by a citizen or a truster).
 4. [referendum](referendum.md) (signed by a citizen).
