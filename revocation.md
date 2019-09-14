@@ -6,6 +6,7 @@ Revocations are published by citizens to revoke their own card.
 Then, they may create a new card with the same public key or a new public key.
 Revocations are also published by citizens and truster to cancel endorsements they previously published.
 It is useless to revoke a publication that already expired.
+The expiration date of a revocation should match the one of the revoked publication.
 
 ## Format
 
