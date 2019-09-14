@@ -3,9 +3,6 @@
 ## Description
 
 Endorsements are published by citizens or trusters to endorse cards, referendums, stations and trusters.
-If set, the `revoke` field means that any previous endorsement of the same participant should be disregarded.
-A citizen can endorse her own card with a revoke field set to publicly discard it.
-Then, she may create a new card with the same public key or a new public key.
 The `endorsed.signature` field is necessary only when endorsing a card or a referendum.
 It should not be set when endorsing a truster or a station.
 Trusters publish endorsements based on their expertise and deep analysis of many publications, including endorsements.
