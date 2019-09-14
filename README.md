@@ -26,7 +26,7 @@ directdemocracy is a voting system with the following properties:
 It provides a voting system relying on 4 types of participant:
 
 1. [citizen](citizen.md): anybody with internet access.
-2. [truster](truster.md): anybody with computer science knowledge and computer network resources.
+2. [trustee](trustee.md): anybody with computer science knowledge and computer network resources.
 3. [station](station.md): (polling station) anybody with computer science knowledge and computer network resources.
 4. [publisher](publisher.md): anybody with computer science knowledge and computer network resources.
 
@@ -35,10 +35,10 @@ Each participant has a pair of [private/public cryptographic keys](cryptography.
 The system relies on 7 types of [publication](publication.md):
 
 1. [citizen](citizen.md) card (signed by a citizen)
-2. [truster](truster.md) card (signed by a truster)
+2. [trustee](trustee.md) card (signed by a trustee)
 ...
-2. [endorsement](endorsement.md) (signed by a citizen or a truster).
-3. [revocation](revocation.md) (signed by a citizen or a truster).
+2. [endorsement](endorsement.md) (signed by a citizen or a trustee).
+3. [revocation](revocation.md) (signed by a citizen or a trustee).
 4. [referendum](referendum.md) (signed by a citizen).
 5. [vote](vote.md) (signed by an anonymized citizen).
 6. [voter](voter.md) (signed by a station).
@@ -48,7 +48,7 @@ The system relies on 7 types of [publication](publication.md):
 
 ### 3.1 Web of Trust
 
-**Participants:** citizens, trusters, publishers.
+**Participants:** citizens, trustees, publishers.
 
 **Publications:** cards, endorsements.
 
@@ -57,17 +57,17 @@ The goal of this web of trust is to ensure that each endorsed card correspond to
 
 1. Each citizen should publish a card with their personal information.
 2. Each citizen should endorse several other citizens they personally know to create a web of endorsements.
-3. Trusters should use the resulting web of endorsements to endorse all the cards corresponding to a unique citizen.
+3. Trustees should use the resulting web of endorsements to endorse all the cards corresponding to a unique citizen.
 
 ### 3.2 Referendum Setup
 
-**Participants:** citizens, trusters, publishers.
+**Participants:** citizens, trustees, publishers.
 
 **Publications**: referendums.
 
 ### 3.3 Vote Process
 
-**Participants:** citizens, stations, trusters.
+**Participants:** citizens, stations, trustees.
 
 **Publications:** vote, voter, votes.
 
@@ -75,7 +75,7 @@ The goal of this web of trust is to ensure that each endorsed card correspond to
 
 ### 3.4 Verifications
 
-**Participants:** publishers, trusters.
+**Participants:** publishers, trustees.
 
 **Publications:** N/A.
 
