@@ -33,6 +33,7 @@ key: my_public_key
 signature: my_signature
 published: 2019-08-21T21:12:00+00.00
 expires: 2022-08-21T21:12:00+00.00
+revoke: true
 endorsed:
   key: public_key_of_the_card
   signature: signature_of_the_card
