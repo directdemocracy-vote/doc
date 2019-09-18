@@ -68,7 +68,7 @@ The goal of this web of trust is to ensure that each endorsed card correspond to
 
 **Publications:** vote, voter, votes.
 
-<img src="https://raw.githubusercontent.com/directdemocracy-vote/doc/master/vote.png" alt="Station workflow" width="561"/>
+<img src="https://raw.githubusercontent.com/directdemocracy-vote/doc/master/vote.svg" alt="Station workflow" width="561"/>
 
 ### 3.4 Verifications
 
