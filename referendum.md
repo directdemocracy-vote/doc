@@ -40,9 +40,9 @@ areas:
   - etc.
  - type: country
    name: Switzerland
-trusters:
-- truster1_public_key
-- truster2_public_key
+trustees:
+- trustee1_public_key
+- trustee2_public_key
 websites:
 - https://www.myreferendum.com
 - https://www.my-referendum.net
