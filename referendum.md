@@ -26,8 +26,11 @@ answers:
 - abstain
 deadline: 2020-01-31
 areas:
-- type: city
+- type: City
   name: Paris
+  latitude: 41.113295
+  longitude: 6.554323
+  geocode: https://geocode.arcgis.com 
   coords:
   - - x1
     - y1
@@ -40,10 +43,8 @@ areas:
   - etc.
  - type: country
    name: Switzerland
-trustees:
-- trustee1_public_key
-- trustee2_public_key
-websites:
-- https://www.myreferendum.com
-- https://www.my-referendum.net
+trustee:
+- trustee_public_key
+website:
+- https://www.myreferendum.net
 ```
