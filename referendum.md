@@ -17,6 +17,19 @@ key: referendum_public_key
 signature: referendum_signature
 published: 2019-09-12T12:33:21+00:00
 expires: 2029-09-12T12:33:21+00:00
+trustee:
+- trustee_public_key
+areas:
+- reference: https://nominatim.openstreemap.org
+  type: city
+  name: Paris
+  latitude: 41.113295
+  longitude: 6.054323 
+- reference: https://nominatim.openstreemap.org
+  type: country
+  name: Switzerland
+  latitude: 45.113295
+  longitude: 6.554323 
 title: my referendum
 description: my description
 question: do you agree?
@@ -25,26 +38,6 @@ answers:
 - no
 - abstain
 deadline: 2020-01-31
-areas:
-- type: City
-  name: Paris
-  latitude: 41.113295
-  longitude: 6.554323
-  geocode: https://geocode.arcgis.com 
-  coords:
-  - - x1
-    - y1
-    - x2
-    - y2
-    - etc.
-  - - x1
-    - y2
-    - etc.
-  - etc.
- - type: country
-   name: Switzerland
-trustee:
-- trustee_public_key
-website:
+websites:
 - https://www.myreferendum.net
 ```
