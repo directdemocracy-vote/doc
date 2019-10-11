@@ -37,6 +37,6 @@ answers:
 - yes
 - no
 - abstain
-deadline: 2020-01-31
+deadline: 2020-12-15T20:00:00+00:00
 website: https://www.myreferendum.net
 ```
