@@ -38,6 +38,5 @@ answers:
 - no
 - abstain
 deadline: 2020-01-31
-websites:
-- https://www.myreferendum.net
+website: https://www.myreferendum.net
 ```
