@@ -17,26 +17,12 @@ key: referendum_public_key
 signature: referendum_signature
 published: 2019-09-12T12:33:21+00:00
 expires: 2029-09-12T12:33:21+00:00
-trustee:
-- trustee_public_key
-areas:
-- reference: https://nominatim.openstreemap.org
-  type: city
-  name: Paris
-  latitude: 41.113295
-  longitude: 6.054323 
-- reference: https://nominatim.openstreemap.org
-  type: country
-  name: Switzerland
-  latitude: 45.113295
-  longitude: 6.554323 
+trustee: trustee_public_key
+area: https://nominatim.openstreetmap.org/?country=France&state=Bourgogne-Franche-Comté&county=Saône-et-Loire&city=Mâcon
 title: my referendum
 description: my description
 question: do you agree?
-answers:
-- yes
-- no
-- abstain
+answers: yes, no, abstain
 deadline: 2020-12-15T20:00:00+00:00
 website: https://www.myreferendum.net
 ```
