@@ -18,7 +18,7 @@ signature: referendum_signature
 published: 1574679658399
 expires: 1890298858399
 trustee: trustee_public_key
-area: https://nominatim.openstreetmap.org/?country=France&state=Bourgogne-Franche-Comté&county=Saône-et-Loire&city=Mâcon
+area: https://nominatim.directdemocracy.vote/?world=Earth&union=European Union&country=France&state=Bourgogne-Franche-Comté&county=Saône-et-Loire&city=Mâcon
 title: my referendum
 description: my description
 question: do you agree?
