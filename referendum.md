@@ -2,8 +2,10 @@
 
 ## Description
 
-A referendum is a [publication](publication.md) written by a citizen aiming at changing the law in a city, state, country or the whole world.
-It should be published on the internet, so that everyone can see it.
+A referendum is a [publication](publication.md) written by a citizen aiming at proposing a law at a specific political level: world, country, state, region, city, etc.
+In case of a law conflict, the upper level law has always the priority over the lower level law.
+For example, if a world law forbid the death penalty, then no lower level law (country, state, region, city, etc.) can allow it.
+Once a referendum proposing a new law is accepted by a majority of voters, the corresponding law should be applied within the delay specified in the description of the referendum.
 
 ## Format
 
