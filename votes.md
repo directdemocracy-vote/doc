@@ -14,8 +14,8 @@ https://directdemocracy.vote/json-schema/0.0.1/votes.schema.json
 schema: https://directdemocracy.vote/json-schema/0.0.1/votes.schema.json
 key: station_public_key
 signature: station_signature
-published: 2020-02-21T08:00:00+00:00
-published: 2030-02-21T08:00:00+00:00
+published: 1590298858399
+published: 1890298858399
 referendum:
   key: referendum_public_key
   signature: referendum_signature

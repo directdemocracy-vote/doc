@@ -10,8 +10,8 @@ https://directdemocracy.vote/json-schema/0.0.1/voter.schema.json
 schema: https://directdemocracy.vote/json-schema/0.0.1/voter.schema.json
 key: station_public_key
 signature: station_signature
-published: 2019-11-23T21:21:33+00:00
-expires: 2029-11-23T21:21:33+00:00
+published: 1590298858399
+expires: 1890298858399
 referedum:
   key: referendum_public_key
   signagure: referendum_signature

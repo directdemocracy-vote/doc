@@ -20,8 +20,8 @@ https://directdemocracy.vote/json-schema/0.0.1/citizen.schema.json
 schema: https://directdemocracy.vote/json-schema/0.0.1/citizen.schema.json
 key: my_public_key
 signature: my_signature
-published: 2019-08-02T20:20:39+00:00
-expires: 2029-08-02T20:20:39+00:00
+published: 1590298858399
+expires: 1890298858399
 familyName: Smith
 givenNames: John
 picture: base64_encoded_jpeg_picture

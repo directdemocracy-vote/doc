@@ -31,8 +31,8 @@ https://directdemocracy.vote/json-schema/0.0.1/endorsement.schema.json
 schema: https://directdemocracy.vote/json-schema/0.0.1/endorsement.schema.json
 key: my_public_key
 signature: my_signature
-published: 2019-08-21T21:12:00+00.00
-expires: 2022-08-21T21:12:00+00.00
+published: 1590298858399
+expires: 1690298858399
 revoke: true
 endorsed:
   key: public_key_of_the_card
