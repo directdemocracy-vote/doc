@@ -20,11 +20,18 @@ signature: referendum_signature
 published: 1574679658399
 expires: 1890298858399
 trustee: trustee_public_key
-area: https://nominatim.directdemocracy.vote/?world=Earth&union=European Union&country=France&state=Bourgogne-Franche-Comté&county=Saône-et-Loire&city=Mâcon
+area: |
+  city=Mâcon
+  county=Saône-et-Loire
+  state=Bourgogne-Franche-Comté
+  country=France
 title: my referendum
 description: my description
 question: do you agree?
-answers: yes, no, abstain
+answers: |
+  yes
+  no
+  abstain
 deadline: 1590298858399
 website: https://www.myreferendum.net
 ```
