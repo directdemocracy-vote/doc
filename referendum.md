@@ -25,6 +25,7 @@ area: |
   county=Saône-et-Loire
   state=Bourgogne-Franche-Comté
   country=France
+  union=European Union
 title: my referendum
 description: my description
 question: do you agree?
