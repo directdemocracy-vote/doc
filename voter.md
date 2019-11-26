@@ -1,11 +1,11 @@
 # Voter
 
-A citizen will send two voter structures to a polling station, one with a vote public key and another one without a vote pulic key.
-The polling station will check the validity of the vote.
-If the citizen is allowed to vote, the polling station will sign and publish the voter structure which doesn't include the vote public key.
-Otherwise, it will sign and publish the voter structure which includes the vote public key.
-The publication of the polling station will be sent to a publisher and also to the citizen.
-If allowed to vote the citizen will then publish a vote structure.
+A citizen sends two voter structures to a polling station, one with a vote public key and another one without a vote public key.
+The polling station checks the validity of the vote.
+If the citizen is allowed to vote, the polling station signs and publishes the voter structure which doesn't include the vote public key.
+Otherwise, it signs and publishes the voter structure which includes the vote public key.
+The polling station sends the publication to a publisher and also to the citizen.
+If allowed to vote the citizen publishes a vote structure.
 
 ## Format
 
