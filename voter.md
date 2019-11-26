@@ -5,7 +5,7 @@ The polling station checks the validity of the vote.
 If the citizen is allowed to vote, the polling station signs and publishes the voter structure which doesn't include the vote public key.
 Otherwise, it signs and publishes the voter structure which includes the vote public key.
 The polling station sends the publication to a publisher and also to the citizen.
-If allowed to vote the citizen publishes a vote structure.
+If allowed to vote the citizen publishes her vote.
 
 ## Format
 
