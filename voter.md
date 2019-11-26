@@ -16,15 +16,15 @@ https://directdemocracy.vote/json-schema/0.0.1/voter.schema.json
 ```yaml
 schema: https://directdemocracy.vote/json-schema/0.0.1/voter.schema.json
 key: station_public_key
-signature: citizen_signature or station_signature
+signature: station_signature_for_voter (may be empty)
 published: 1590298858399
 expires: 1890298858399
+citizenSignature: citizen_signature_for_voter
+voteKey: vote_public_key (may be empty)
 referedum:
   key: referendum_public_key
   signagure: referendum_signature
 citizen:
-  key: citizen324_public_key
-  signature: citizen324_signature
-voteKey: vote_public_key
-citizenSignature: citizen_signature
+  key: citizen_public_key
+  signature: citizen_signature
 ```
