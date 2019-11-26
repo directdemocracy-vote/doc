@@ -16,7 +16,7 @@ https://directdemocracy.vote/json-schema/0.0.1/voter.schema.json
 ```yaml
 schema: https://directdemocracy.vote/json-schema/0.0.1/voter.schema.json
 key: station_public_key
-signature: station_signature_for_voter (may be empty)
+signature: station_signature_for_voter (initially empty)
 published: 1590298858399
 expires: 1890298858399
 citizenSignature: citizen_signature_for_voter
