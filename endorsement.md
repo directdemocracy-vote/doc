@@ -29,12 +29,12 @@ https://directdemocracy.vote/json-schema/0.0.1/endorsement.schema.json
 
 ```yaml
 schema: https://directdemocracy.vote/json-schema/0.0.1/endorsement.schema.json
-key: my_public_key
-signature: my_signature
+key: citizen1_public_key
+signature: citizen1_signature_for_endorsement
 published: 1590298858399
 expires: 1690298858399
 revoke: true
 endorsed:
-  key: public_key_of_the_card
-  signature: signature_of_the_card
+  key: public_key_of_citizen2
+  signature: citizen2_signature_for_citizen_card
 ```

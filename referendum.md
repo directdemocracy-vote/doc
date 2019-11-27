@@ -15,8 +15,8 @@ https://directdemocracy.vote/json-schema/0.0.1/referendum.schema.json
 
 ```yaml
 schema: https://directdemocracy.vote/json-schema/0.0.1/referendum.schema.json
-key: referendum_public_key
-signature: referendum_signature
+key: citizen_public_key
+signature: citizen_signature_for_referendum
 published: 1574679658399
 expires: 1890298858399
 trustee: trustee_public_key

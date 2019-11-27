@@ -18,8 +18,8 @@ https://directdemocracy.vote/json-schema/0.0.1/citizen.schema.json
 
 ```yaml
 schema: https://directdemocracy.vote/json-schema/0.0.1/citizen.schema.json
-key: my_public_key
-signature: my_signature
+key: citizen_public_key
+signature: citizen_signature_for_citizen
 published: 1590298858399
 expires: 1890298858399
 familyName: Smith
