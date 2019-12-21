@@ -4,7 +4,7 @@ When a citizen wants to vote, she generate a new pair of private and public key 
 Then she securely sends two signed packets to the station of her choice.
 The first packet contains her vote card, the referendum and the station.
 The second packet contains the public key and the referendum.
-The station checks that both packets are received and that the citizen is entitled to vote (area, truster endorsement).
+The station checks that both packets are received and that the citizen is entitled to vote (area, trustee endorsement).
 If not, it declines the request of the citizen and publish a message saying it refused to allow this citizen to vote to this referendum.
 This message is also sent back to the citizen.
 Otherwise, the station signs the first packet, publishes it and sent it back to the citizen.
