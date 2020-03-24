@@ -31,23 +31,22 @@ The voting system relies on 3 types of organizations:
 
 Citizens and organizations own a pair of [private/public cryptographic keys](cryptography.md) allowing them to sign and be identified uniquely.
 
-The system relies on 7 types of [publication](publication.md):
+The system relies on 6 types of [publication](publication.md):
 
 1. [citizen](citizen.md): signed by a citizen.
 2. [organization](organization.md): signed by an organization.
 3. [endorsement](endorsement.md): signed by a citizen or a trustee.
 4. [referendum](referendum.md): signed by anyone.
-5. [vote](vote.md): signed by an anonymized citizen.
-6. [voter](voter.md): signed by a station.
-7. [votes](votes.md): signed by a station.
+5. [ballot](ballot.md): possibly signed by itself, a station and a citizen.
+6. [vote](vote.md): signed by a ballot.
 
 ## 3 Workflows
 
 ### 3.1 Web of Trust
 
-**Participants:** citizens, trustees, publishers.
+**Organizations:** trustees, publishers.
 
-**Publications:** cards, endorsements.
+**Publications:** citizen, endorsement.
 
 The web of trust aims at establishing a [web of trust](https://en.wikipedia.org/wiki/Web_of_trust) between [citizens](citizen.md), with the help of [endorsements](endorsement.md) and [trustees](trustee.md).
 The goal of this web of trust is to ensure that each endorsed card correspond to a unique citizen who can take part in a vote.
@@ -58,24 +57,24 @@ The goal of this web of trust is to ensure that each endorsed card correspond to
 
 ### 3.2 Referendum Setup
 
-**Participants:** citizens, trustees, publishers.
+**Organizations:** publishers.
 
 **Publications**: referendums.
 
 ### 3.3 Vote Process
 
-**Participants:** citizens, stations, trustees.
+**Organizations:** stations, publishers.
 
-**Publications:** vote, voter, votes.
+**Publications:** ballot, vote.
 
 <img src="https://raw.githubusercontent.com/directdemocracy-vote/doc/master/vote.png" alt="Station workflow" width="561"/>
 
 ### 3.4 Verifications
 
-**Participants:** publishers, trustees.
+**Organizations:** publishers.
 
-**Publications:** N/A.
+**Publications:** ballot, vote.
 
 Anyone can verify the information published by anonymized citizens, trustees, stations, etc. to detect possible frauds in the system.
-For example, for each station and each referendum, the number of published public keys should match the number of published vote cards/referendum packets.
+For example, for each station and each referendum, the published ballots should match the published votes.
 If numbers do not match, something has go wrong, the vote should not be considered secure and the reputation of the station should decrease.
