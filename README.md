@@ -33,11 +33,11 @@ Citizens and organizations own a pair of [private/public cryptographic keys](cry
 
 The system relies on 6 types of [publication](publication.md):
 
-1. [citizen](citizen.md): signed by a citizen.
-2. [organization](organization.md): signed by an organization.
+1. [citizen](citizen.md): self-signed.
+2. [organization](organization.md): self-signed.
 3. [endorsement](endorsement.md): signed by a citizen or a trustee.
-4. [referendum](referendum.md): signed by anyone.
-5. [ballot](ballot.md): possibly signed by itself, a station and a citizen.
+4. [referendum](referendum.md): self-signed.
+5. [ballot](ballot.md): possibly self-signed, and/or signed by a station and/or a citizen.
 6. [vote](vote.md): signed by a ballot.
 
 ## 3 Workflows
