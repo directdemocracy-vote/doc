@@ -26,9 +26,7 @@ key: ballot_public_key
 signature: ballot_signature
 published: 1590298858399
 expires: 1890298858399
-referendum:
-  key: citizen2_public_key
-  signature: citizen2_signature_for_referendum
+referendum: referendum_public_key
 station:
   key: station_public_key
   signature: station_signature_for_ballot (initially empty)
