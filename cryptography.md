@@ -23,3 +23,10 @@ The value stored in the JSON structure is:
 ```
 MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAkoSFvGywo4sb0crZlmDJR7iOSSioDS/ujo4dI0ISYezTVSBnuMvdEtCNfjIXUXy5fMbemrCB8GaragdJQf3w5xCKYjVSHlU2CEglTz0tgKTfm00/eoBPoW0oEaHRovVkwtaMDECvN8DyWBsA0XqVGXQsSYa3WA9s0CaaWv9+za1N1Lfv6gKxXMItWcMBcBnPqj2mcl3qgbp635maIkSMk9/ybH80kv8lxkc/VFsAWsLykcMSZdgNWaxWvNXl6zES8ZkNfOnXHYztbIm25Hjrixjan50H4C04HkvvLILFXsNylxOz7vZNYauO6Oh2Jn8IkKzTtXuxaLmh7KuzrLSk1QIDAQAB
 ```
+
+The commands to generate key pairs are:
+```bash
+ssh-keygen -t rsa -b 2048 -f id_rsa
+ssh-keygen -f id_rsa.pub -e -m pem > id_rsa.pub2
+mv id_rsa.pub2 id_rsa.pub
+```
