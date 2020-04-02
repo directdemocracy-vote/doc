@@ -30,4 +30,5 @@ openssl genpkey -algorithm RSA -out id_rsa -pkeyopt rsa_keygen_bits:2048
 openssl rsa -pubout -in id_rsa -out id_rsa.pub
 ```
 `id_rsa` is the private key.
+
 `id_rsa.pub` is the public key.
