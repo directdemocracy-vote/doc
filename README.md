@@ -39,7 +39,7 @@ The system relies on 7 types of [publication](publication.md):
 3. [endorsement](endorsement.md): signed by a citizen or a trustee.
 4. [referendum](referendum.md): self-signed.
 5. [ballot](ballot.md): possibly self-signed, and/or signed by a station and/or a citizen.
-6. [registration](registration.md): signed by a citizen.
+6. [registration](registration.md): signed by a citizen and a station.
 6. [vote](vote.md): signed by a ballot.
 
 ## 3 Workflows
