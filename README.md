@@ -23,21 +23,23 @@ directdemocracy is a voting system with the following properties:
 
 ## 2 Components
 
-The voting system relies on 3 types of organizations:
+The voting system relies on 4 types of organizations:
 
 1. [trustee](trustee.md): webservice granting endorsements to citizens and other organizations.
 2. [station](station.md): (polling station) webservice for the anonymization of votes.
 3. [publisher](publisher.md): webservice for storing and displaying [publications](publication.md).
+4. [observer](observer.md): webservice checking voting process and displaying referendum results.
 
 Citizens and organizations own a pair of [private/public cryptographic keys](cryptography.md) allowing them to sign and be identified uniquely.
 
-The system relies on 6 types of [publication](publication.md):
+The system relies on 7 types of [publication](publication.md):
 
 1. [citizen](citizen.md): self-signed.
 2. [organization](organization.md): self-signed.
 3. [endorsement](endorsement.md): signed by a citizen or a trustee.
 4. [referendum](referendum.md): self-signed.
 5. [ballot](ballot.md): possibly self-signed, and/or signed by a station and/or a citizen.
+6. [registration](registration.md): signed by a citizen.
 6. [vote](vote.md): signed by a ballot.
 
 ## 3 Workflows
@@ -55,6 +57,8 @@ The goal of this web of trust is to ensure that each endorsed card correspond to
 2. Each citizen should endorse several other citizens they personally know to create a web of endorsements.
 3. Trustees should use the resulting web of endorsements to endorse all the cards corresponding to a unique citizen.
 
+Similarly, citizens and trustees may endorse stations, publishers and observers.
+
 ### 3.2 Referendum Setup
 
 **Organizations:** publishers.
@@ -65,16 +69,17 @@ The goal of this web of trust is to ensure that each endorsed card correspond to
 
 **Organizations:** stations, publishers.
 
-**Publications:** ballot, vote.
+**Publications:** registration.
 
 <img src="https://raw.githubusercontent.com/directdemocracy-vote/doc/master/vote.png" alt="Station workflow" width="561"/>
 
-### 3.4 Verifications
+### 3.4 Result and Verification
 
-**Organizations:** publishers.
+**Organizations:** publishers, observers.
 
-**Publications:** ballot, vote.
+**Publications:** ballot, registration, vote.
 
-Anyone can verify the information published by anonymized citizens, trustees, stations, etc. to detect possible frauds in the system.
-For example, for each station and each referendum, the published ballots should match the published votes.
-If numbers do not match, something has go wrong, the vote should not be considered secure and the reputation of the station should decrease.
+Anyone, with or without the help of [observers](observer.md), can verify the information published by anonymized citizens, trustees, stations, etc. to detect possible frauds in the system.
+For example, for each [station](station.md) and each [referendum](referendum.nd), the number of published [registrations](registration.md) should match the number of published [ballots](ballot.md).
+Also, the published [ballots](ballot.md) should match the published [votes](vote.md).
+In case of mismatch, something has gone wrong, the vote should not be considered secure and the reputation of the station should decrease.
