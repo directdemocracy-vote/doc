@@ -72,6 +72,7 @@ Similarly, citizens and trustees may endorse stations, publishers and observers.
 **Publications:** registration.
 
 The voting process is described in details [here](voting.md). It is summarized on the following figure:
+
 <img src="https://raw.githubusercontent.com/directdemocracy-vote/doc/master/vote.png" alt="Voting Process" width="561"/>
 
 ### 3.4 Verification and Counting

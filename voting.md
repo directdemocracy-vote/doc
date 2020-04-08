@@ -34,6 +34,7 @@ An observer displaying a wrong result for a vote will be quickly spotted by trus
 
 This section describe the full voting process in details.
 It is summarized on the following figure:
+
 <img src="https://raw.githubusercontent.com/directdemocracy-vote/doc/master/vote.png" alt="Voting Process" width="561"/>
 
 ## 1 Citizens
