@@ -1,12 +1,38 @@
-# Features and Limitations
+# Features and Limitations of the Voting System
 
 A perfect voting system doesn't exists.
-The system we propose has a number of limitations.
-However, such limitations should not affect the democratic process.
+The system we propose has a number of limitations explained in this section.
+However, such limitations should not affect too much the democratic process.
+
+## Malicious Polling stations
+
+A malicious polling station may misbehave, but this will be visible by all.
+If that happens, all the votes handled by this stations will be discarded.
+All the honest citizens who voted through this polling station will loose their vote.
+And the polling station will likely get a bad reputation from most of the trustees.
+This will lower the likelihood it will be used by citizens in upcoming votes.
+A polling station handling a large number of votes is however unlikely to misbehave.
+This is because to have a large number of votes, a polling station should have a high reputation.
+And a high reputation is only possible if the station never misbehaved.
+If it misbehaves once, it will immediately loose its reputation and almost all its voters for the upcoming votes.
+
+## Malicious Citizens
+
+A malicious citizen can vote several times to the same referendum, but her votes won't be counted.
+She cannot either cause a misbehavior in a honest polling station.
+So, she cannot force the discard of other's votes.
+However, her suspicious activity is likely to cause her a bad reputation from trustees and thus to prevent her from voting in upcoming votes.
+
+## Malicious Observers and Trustees
+
+Malicious observers and trustees will quickly get a bad reputation from the community of trustees.
+With a bad reputation, they will be disregarded by most people.
+A referendum referring to a trustee with a bad reputation will be unlikely to attract voters, hence its results will not be relevant.
+An observer displaying a wrong result for a vote will be quickly spotted by trustees and its reputation will decrease, thus rendering it irrelevant.
 
 # Voting
 
-This section describe the full voting process.
+This section describe the full voting process in details.
 
 ## 1 Citizens
 
@@ -28,9 +54,7 @@ Else proceed to **1.3 Vote**.
 
 ### 1.2 Registration Cancellation
 
-`A` creates a cancelled registration structure which contains the public key of `R`, `S` and `A` and sign it with `A`: `-RSa`.
-The cancelled registration publication date (*published*) is set to the current date.
-`A` publishes `-RSa` and proceed to **1.1 Registration**, likely with a different polling station.
+`A` publishes the `RSba` structure it sent to `S` earlier and proceed to **1.1 Registration**, likely with a different polling station.
 
 ### 1.3 Vote
 
@@ -58,9 +82,10 @@ It send back `RSbs + RSas` to to `A` and proceed to **2.1 Registration Desk** to
 ### 2.2 Registrations Check
 
 At this point, the *deadline* of `R` is reached.
-Each station `S` check that all the citizens who registered with them in `RSas` did not register with another station.
+Each station `S` check that all the citizens who registered with them with a valid `RSas` did not register with another station.
+A valid `RSas` is a `RSas` which is not cancelled by a corresponding `RSba` publication.
 If a citizen `A` registered with another station, e.g., another `RSas` is found with a different `S`, then proceed to **2.3 Ballot Rejection**.
-Once `S` checked all its citizen registrations, it publishes `RSs` to mean it's done with registration checks.
+`S` should check all its citizen registrations this way and reject all wrong ballots (if any).
 This should happen within a short delay after *deadline* as observers will start counting votes quickly.
 It is recommended that `S` clears its database to keep no record linking citizens `A` to ballots `B` for `R` in case of any possible future attack on its database.
 
@@ -70,33 +95,31 @@ It is recommended that `S` clears its database to keep no record linking citizen
 
 ## 3 Observers & Trustees
 
-After a short delay after the *deadline* for `R` has passed, the observers, including trustees can start checking the results.
+After the *deadline* for `R` has passed, the observers, including trustees, can start checking the results.
+It may be possible that some stations didn't yet finished their registrations check (see **2.2 Registrations Check**) or will never finish it.
+An unfinished registrations check will cause the votes of the corresponding station not being counted until the registrations check is complete.
+If a station takes too long (or forever) to complete its registrations check, its reputation will decrease accordingly.
 
-### 3.1 Matching Ballots and Votes
+### 3.1 List Valid Stations
 
-For each vote `Vb`, check that there is a single corresponding `RSbs`.
-If there is no corresponding `RSbs`, `Vb` is disregarded.
-If there are several corresponding `RSbs` (F0), `Vb` is disregarded and the oldest corresponding `RSas` is determined ;
-all the other stations get invalidated.
+For each station, the observers check that the registrations check is complete (see **2.2 Registrations Check**).
+The registrations check is considered complete if all the `RSas` of this station that have another `RSas` (with the same `R` and `S` but with a different `S`) are cancelled with a `RSba` (with the same `R`, `S` and `A`).
+If the registrations check is complete, add the station in the list of valid stations.
 
-### 3.2 Uniqueness
+For each valid station in the list, we count all the `RSas` registrations which are valid.
+A `RSas` registration is valid if it is not cancelled by a corresponding `RSba`.
+Similarly, we count all the `RSbs` ballots which are valid.
+A `RSbs` is valid is it is not cancelled by a corresponding `RSba`.
+If the two counts do are not equal, the station is withdrawn from the list of valid stations (and is likely to get a bad reputation).
 
-Check that each citizen voted only once, e.g., there is no several `RSas` with the same `R` and same `A`.
-If a citizen voted several times (F1), the oldest `RSas` is determined, based on the *published* date.
-If it is multiple, e.g., several `RSas` having the same oldest *published* date, (F2).
+### 3.2 Votes Counting
 
-For each `S`, count the number of `RSas`, `RSbs` and `RSbas`.
-if (n(`RSas`) != n(`RSbs`) - n(`RSbas`)), (F4) `S` get invalidated.
+For each valid station in the list we get all the `RSbs` and get the corresponding `Vb` if any.
+If several `Vb` are found they are all disregarded.
+If we find another `RSbs` with the same `B` in another valid station, the corresponding `Vb` is disregarded.
+If not disregarded, the `Vb` is added to the list of valid votes and its *answer* is counted.
 
-### 3.3 Invalidated Stations
+Observers may iterate the whole process again by looping to **3.1 and 3.2** for a while to get an increasingly precise result for the vote (while the polling stations are still proceeding with registrations checks).
 
-When a station `S` did a bad job, it gets invalidated:
-All votes related to `S` are removed from the count and trustees will likely decrease the reputation of `S`.
-
-# Weaknesses
-
-This section explores the cheating possibilities for each participant.
-
-## Malicious Citizen
-
-## Malicious Station
+After a while, the results should get stable and one can consider the counting is over.
+Results can be published by observers on their web sites.
