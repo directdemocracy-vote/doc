@@ -30,6 +30,11 @@ With a bad reputation, they will be disregarded by most people.
 A referendum referring to a trustee with a bad reputation will be unlikely to attract voters, hence its results will not be relevant.
 An observer displaying a wrong result for a vote will be quickly spotted by trustees and its reputation will decrease, thus rendering it irrelevant.
 
+## Vote Anonymity
+
+It is not possible to find out what a citizen voted from the publications of the system unless the citizen decides to cancel her vote or her station decides to do so.
+In the later case, the station will get a bad reputation if disclosing the citizen vote is not justified by a publicly verifiable cheating attempt of the citizen.
+
 # Voting
 
 This section describe the full voting process in details.
