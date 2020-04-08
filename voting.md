@@ -122,7 +122,7 @@ If several `Vb` are found they are all disregarded.
 If we find another `RSbs` with the same `B` in another valid station, the corresponding `Vb` is disregarded.
 If not disregarded, the `Vb` is added to the list of valid votes and its *answer* is counted.
 
-Observers may iterate the whole process again by looping to **3.1 and 3.2** for a while to get an increasingly precise result for the vote (while the polling stations are still proceeding with registrations checks).
+Observers may iterate the whole process again by looping to **3.1** and **3.2** for a while to get an increasingly precise result for the vote (while the polling stations are still proceeding with registrations checks).
 
 After a while, the results should get stable and one can consider the counting is over.
 Results can be published by observers on their web sites.
