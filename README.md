@@ -74,7 +74,7 @@ Similarly, citizens and trustees may endorse stations, publishers and observers.
 The voting process is described in details [here](voting.md). It is summarized on the following figure:
 <img src="https://raw.githubusercontent.com/directdemocracy-vote/doc/master/vote.png" alt="Voting Process" width="561"/>
 
-### 3.4 Verification and Results
+### 3.4 Verification and Counting
 
 **Organizations:** publishers, observers.
 
@@ -83,4 +83,4 @@ The voting process is described in details [here](voting.md). It is summarized o
 Anyone, with or without the help of [observers](observer.md), can verify the information published by anonymized citizens, trustees, stations, etc. to detect possible frauds in the system.
 For example, for each [station](station.md) and each [referendum](referendum.nd), the number of published [registrations](registration.md) should match the number of published [ballots](ballot.md).
 Also, the published [ballots](ballot.md) should match the published [votes](vote.md).
-More details about verification are provided [here](voting.md).
+More details about verification and counting are provided [here](voting.md).
