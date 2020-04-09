@@ -90,12 +90,14 @@ It send back `RSbs + RSas` to to `A` and proceed to **2.1 Registration Desk** to
 ### 2.2 Registrations Check
 
 At this point, the *deadline* of `R` is reached.
-Each station `S` check that all the citizens who registered with them with a valid `RSas` did not register with another station.
+Each station `S` checks that all the citizens who registered with them with a valid `RSas` did not register in another station with a valid `RSas`.
 A valid `RSas` is a `RSas` which is not cancelled by a corresponding `RSba` publication.
-If a citizen `A` registered with another station, e.g., another `RSas` is found with a different `S`, then proceed to **2.3 Ballot Rejection**.
+If a citizen `A` registered with another station, e.g., another `RSas` is found with a different `S` and no corresponding `RSba`, then proceed to **2.3 Ballot Rejection**.
 `S` should check all its citizen registrations this way and reject all wrong ballots (if any).
 This should happen within a short delay after *deadline* as observers will start counting votes quickly.
-It is recommended that `S` clears its database to keep no record linking citizens `A` to ballots `B` for `R` in case of any possible future attack on its database.
+Once done, it is recommended that `S` clears its database to keep no record linking citizens `A` to ballots `B` for `R`.
+This should prevent the possible revelation of citizens' votes in case of a later malicious intrusion in the database.
+Such an event would obviously compromise the reputation of the `S`.
 
 ### 2.3 Ballot Rejection
 
