@@ -4,7 +4,7 @@
 
 A citizen is a unique person aged 18 or more.
 Anybody can publish a citizen card to become a citizen.
-The registration process requires the publication of a digitally signed citizen card with a family name, given names, picture, GPS location of home, etc.
+The registration process requires the publication of a digitally signed citizen card with a family name, given names, picture and GPS coordinates of home.
 No review or approval is needed.
 However, the publisher of a citizen card won't be able to vote if her card is not endorsed by a reputed [trustee](trustee.md).
 [Trustees](trustee.md) will endorse cards they believe are correct.
@@ -25,6 +25,6 @@ expires: 1890298858399
 familyName: Smith
 givenNames: John
 picture: base64_encoded_jpeg_picture
-latitude: 40724723
-longitude: -73993403
+latitude: 40.724723
+longitude: -73.993403
 ```
