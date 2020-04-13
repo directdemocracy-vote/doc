@@ -121,8 +121,14 @@ It may be possible that some stations didn't yet finished their registrations ch
 An unfinished registrations check will cause the votes of the corresponding station not being counted until the registrations check is complete.
 If a station takes too long (or forever) to complete its registrations check, its reputation will decrease accordingly.
 
-### 3.1 List Valid Stations
+### 3.1 List Eligible Citizens
 
+List all the citizens endorsed by the referendum trustee and matching the geographic area of the referendum.
+They constitute the electoral corpus for the referendum.
+
+### 3.2 List Valid Stations
+
+Create a list of all the stations which have published the registration of at least one eligible citizen.
 For each station, the observers check that the registrations check is complete (see **2.2 Registrations Check**).
 The registrations check is considered complete if all the `RSAas` of this station that have another `RSAas` (with the same `R` and `S` but with a different `S`) are cancelled either with a `ABab` or a `(RSBb + RSAa)s` publication (with the same `R`, `S` and `A`).
 If the registrations check is complete, add the station in the list of valid stations.
@@ -135,14 +141,14 @@ A `RSBbs` is valid is it is not cancelled by a corresponding `ABab`.
 Again, if a corresponding `(RSBb + RSAa)s` is found at this point, this is an abusing behavior of `S` and the reputation of `S` will decrease.
 If the two counts do are not equal, the station is withdrawn from the list of valid stations and will get a bad reputation.
 
-### 3.2 Votes Counting
+### 3.3 Votes Counting
 
 For each valid station in the list we get all the `RSBbs` and get the corresponding `VBb` if any.
 If several `VBb` are found they are all disregarded.
 If we find another `RSBbs` with the same `B` in another valid station, the corresponding `VBb` is disregarded.
 If not disregarded, the `VBb` is added to the list of valid votes and its *answer* is counted.
 
-Observers may iterate the whole process again by looping to **3.1** and **3.2** for a while to get an increasingly precise result for the vote (while the polling stations are still proceeding with registrations checks).
+Observers may iterate the whole process again by looping to **3.2** and **3.3** for a while to get an increasingly precise result for the vote (while the polling stations are still proceeding with registrations checks).
 
 After a while, the results should get stable and one can consider the counting is over.
 Results can be published by observers on their web sites.
