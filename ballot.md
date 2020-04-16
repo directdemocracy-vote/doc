@@ -18,4 +18,5 @@ referendum: referendum_public_key
 station:
   key: station_public_key
   signature: station_signature_for_ballot (initially empty)
+revoke: 0
 ```

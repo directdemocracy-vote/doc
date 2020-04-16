@@ -27,22 +27,21 @@ The voting system relies on 4 types of organizations:
 
 1. [trustee](trustee.md): webservice granting endorsements to citizens and other organizations.
 2. [station](station.md): (polling station) webservice for the anonymization of votes.
-3. [publisher](publisher.md): webservice for storing and displaying [publications](publication.md).
+3. [publisher](publisher.md): webservice for storing, displaying [publications](publication.md).
 4. [observer](observer.md): webservice checking voting process and displaying referendum results.
 
 Citizens and organizations own a pair of [private/public cryptographic keys](cryptography.md) allowing them to sign and be identified uniquely.
 
-The system relies on 9 types of [publication](publication.md):
+The system relies on 8 types of [publication](publication.md):
 
 1. [citizen](citizen.md): self-signed.
 2. [organization](organization.md): self-signed.
 3. [endorsement](endorsement.md): signed by a citizen or a trustee.
-4. [referendum](referendum.md): self-signed.
-5. [ballot](ballot.md): possibly self-signed, and/or signed by a station and/or a citizen.
-6. [registration](registration.md): signed by a citizen and a station.
-7. [vote](vote.md): signed by a ballot.
-8. [cancellation](cancellation.md): cancellation of a ballot and corresponding registration signed by a citizen.
-9. [rejection](rejection.md): rejection of a ballot and corresponding registration signed by a station.
+4. [area](area.md): geographic area for a referendum.
+5. [referendum](referendum.md): self-signed.
+6. [ballot](ballot.md): possibly self-signed, and/or signed by a station and/or a citizen.
+7. [registration](registration.md): signed by a citizen and a station.
+8. [vote](vote.md): signed by a ballot.
 
 ## 3 Workflows
 
