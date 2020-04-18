@@ -58,40 +58,39 @@ It is summarized on the following figure:
 ### 1.1 Registration
 
 The citizen `A` choose a referendum `R` and a polling station `S` she will use for that vote.
+`F` is the *deadline* of `R`.
 `R` includes a reference to a trustee `T` which represents the authority for `R`.
 `A` creates a new pair of cryptographic keys `B` for her ballot.
 `A` creates a ballot structure containing the public keys of `R`, `S` and `B` and signs it with her `B` key: `RSBb`.
-The ballot also contains a publication date (*published*) set to `F`, which is the *deadline* of `R`.
+The ballot also contains a publication date (*published*) set to the current date, which means it can be published now.
 That means, it won't be made public before this date.
 `A` creates a registration structure, that is containing the public keys of `R`, `S` and `A` and sign it with her `A` key: `RSAa`.
-The publication date (*published*) of the registration is set to the current date, which means it can be published now.
+The publication date (*published*) of the registration is set to the current date.
 `A` sends `RSBb + RSAa` to `S` and waits for an answer.
-If `S` takes too long to answer or answers anything else than `RSBbs + RSAas`, proceed to **1.1 Registration**, likely with a different polling station.
-Check the answer of `S`: `R`, `S`, `B` and `A` public keys and check the 4 signatures.
+If `S` takes too long to answer or answers anything else than `RSBs + RSAas`, proceed to **1.1 Registration**, likely with a different polling station.
+Check the answer of `S`: `R`, `S`, `B` and `A` public keys and check the 3 signatures.
 If any check fails, proceed to **1.1 Registration**, likely with a different polling station.
 Else proceed to **1.2 Vote**.
 
 ### 1.2 Vote
 
-`A` creates a vote structure containing her answer `V` to `R`, her `B` key and signs it with her `B` key: `VBb`.
-The vote publication date (*published*) is set to `F`.
-That means, it won't be made public before this date.
-After some random time but before `F`, `A` publishes `VBb`.
+`A` uses the `RSBs` ballot structure it just received from `S`, add her vote answer `V` and signs it with her `B` key: `RSBsVb`.
+After some random time but before `F`, `A` publishes `RSBsVb`.
 
 ## 2 Stations
 
 ### 2.1 Registration Desk
 
 If `S` receives no `RSBb + RSAa` message from `A` until the *deadline* of `R` is reached, proceed to **2.2 Registrations Check**.
-`S` receives `RSBb + RSAa`. It checks that `S` corresponds to itself, that `R` exists, that the *published* and *expired* dates are correct and checks the 2 signatures. The *published* date should be very close to now for `RSAa` and `F` for `RSBb`.
+`S` receives `RSBb + RSAa`. It checks that `S` corresponds to itself, that `R` exists, that the *published* and *expired* dates are correct and checks the 2 signatures. The *published* date should be very close to now for `RSAa` and `RSBb`.
 `S` also checks that `A` did not already registered with it.
 Then, `S` checks the available publications to determine if `A` is allowed to vote to `R`:
 First, `S` checks if there is a valid publication signed by `T` and endorsing `A`.
 Then, `S` checks from publications signed by `T` if the *latitude* and *longitude* of `A` lies in the *area* of `R`.
 If any check fails, `S` replies "no" to `A`, with possibly some explanation why it refused her and proceed to **2.1 Registration Desk**.
-Otherwise `S`, signs both structures so that it is now `RSBbs` and `RSAas`.
-It publishes `RSAas` and will publish `RSBbs` just before `F`.
-It sends `RSBbs + RSAas` back to `A` and proceed to **2.1 Registration Desk** to possibly handle other citizen registrations.
+Otherwise `S` removes the `b` signature from `RSBb`, set the publication date (*published*) of `RSB` to `F` and signs both structures: `RSBs` and `RSAas`.
+It publishes `RSAas` immediately.
+It sends `RSBs + RSAas` back to `A` and proceed to **2.1 Registration Desk** to possibly handle other citizen registrations.
 
 ### 2.2 Registrations Check
 
@@ -99,19 +98,19 @@ At this point, `F` is reached.
 Each station `S` checks from the publications that all the citizens who registered with them with a `RSAas` did not register in another station with a more recent `RSAas`.
 If a citizen `A` registered more recently with another station, e.g., a more recent `RSAas` is found with a different `S`, then proceed to **2.3 Rejection**.
 `S` should check all its citizen registrations this way and reject all wrong ballots (if any).
-This should happen within a short delay after *deadline* as observers will start counting votes quickly.
+This should happen within a short delay after `F` as observers will start counting votes quickly.
 Once done, it is recommended that `S` clears its database to keep no record linking citizens `A` to ballots `B` for `R`.
 This should prevent the possible revelation of citizens' votes in case of a later malicious intrusion in the database.
 Such an event would obviously compromise the reputation of the `S`.
 
 ### 2.3 Rejection
 
-`S` publishes the original `RSBb` it received from `A`, adds a revoke flag and signs it: `RSBbs-`.
-This cancels the corresponding ballot and vote before the upcoming counting.
+`S` publishes the original `RSBb` it received from `A` and signs it: `RSBbs`.
+This cancels the corresponding `RSBsVb` ballot (if any) before the upcoming counting.
 
 ## 3 Observers & Trustees
 
-After the *deadline* for `R` has passed, the observers, including trustees, can start checking the results.
+After the `F` has passed, the observers, including trustees, can start checking the results.
 It may be possible that some stations didn't yet finished their registrations check (see **2.2 Registrations Check**) or will never finish it.
 An unfinished registrations check will cause the votes of the corresponding station not being counted until the registrations check is complete.
 If a station takes too long (or forever) to complete its registrations check, its reputation will decrease accordingly.
@@ -134,16 +133,16 @@ Copy the list of eligible stations to the list of valid stations.
 
 For each station in the list of valid stations, check that the registrations check is complete (see **2.2 Registrations Check**):
 Mark the all `RSAas` of a station as valid if they are the most recent `RSAas` with the same `R` and `A` but a different `S` among the list of valid stations.
-Similarly, mark all the `RSBbs` ballots of a station as valid if they are not revoked with a corresponding `RSBbs-` (same `R`, `S` and `B`).
+Similarly, mark all the `RSBsVb` ballots of a station as valid if they are not revoked with a corresponding `RSBbs` (same `R`, `S` and `B`).
 If the count of valid registrations does not equal the count of valid ballots, the station is withdrawn from the list of valid stations and added to the list of suspicious stations.
 Station in the list of suspicious stations are likely to get a bad reputation.
 Once all the stations have been checked, if at least one station was withdrawn, **loop back to 3.4**.
 
 ### 3.5 Votes Counting
 
-For each station in the list of valid stations, get all the valid `RSBbs` and their corresponding `VBb` if any.
-If several `VBb` are found they are all disregarded.
-Otherwise, the `VBb` is added to the list of valid votes and its *answer* is counted.
+For each station in the list of valid stations, get all the valid `RSBsVb`.
+If several `RSBsVb` are found with the same `R` and same `B` they are all disregarded.
+Otherwise, `V` *answer* is counted.
 
 Observers may iterate the whole process again by looping through **3.3**, **3.4** and **3.5** for a while to get an increasingly precise result for the vote (while the polling stations are still proceeding with registrations checks).
 
