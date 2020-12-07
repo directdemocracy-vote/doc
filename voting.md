@@ -23,12 +23,12 @@ She cannot either cause a misbehavior in a honest polling station.
 So, she cannot force the discard of other's votes.
 However, her suspicious activity is likely to cause her a bad reputation from trustees and thus to prevent her from voting in upcoming votes.
 
-## Malicious Observers and Trustees
+## Malicious Publishers and Trustees
 
-Malicious observers and trustees will quickly get a bad reputation from the community of trustees.
+Malicious publishers and trustees will quickly get a bad reputation from the community of trustees.
 With a bad reputation, they will be disregarded by most people.
 A referendum referring to a trustee with a bad reputation will be unlikely to attract voters, hence its results will not be relevant.
-An observer displaying a wrong result for a vote will be quickly spotted by trustees and its reputation will decrease, thus rendering it irrelevant.
+A publisher displaying a wrong result for a vote will be quickly spotted by trustees and its reputation will decrease, thus rendering it irrelevant.
 
 ## Vote Anonymity
 
