@@ -3,7 +3,7 @@
 ## Description
 
 An area is a [publication](publication.md) representing a geographic zones defined by a set of polygons and used to delimit the boundaries of a referendum.
-Polygons are expressed in the GeoJSON MultiPolygon format.
+Polygons are expressed as coordinates in the GeoJSON MultiPolygon format.
 The name should match the area field of the referendum.
 It is usually published by the trustee of the referendum.
 
